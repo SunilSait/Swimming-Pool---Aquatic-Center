@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found — AquaElite Swimming Academy. The page you're looking for doesn't exist.">
+    <title>404 — Page Not Found | AquaElite</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#0077B6', secondary: '#1B2A4A' } } } }</script>
+</head>
+<body class="min-h-screen bg-gradient-mesh flex flex-col">
+
+<!-- Top Bar -->
+<div class="flex items-center justify-between p-4 sm:p-6 max-w-7xl mx-auto w-full">
+    <div></div>
+    <div class="flex items-center gap-2">
+        <button id="auth-dir-btn" onclick="toggleAuthDir()" class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/10 border border-white/15 text-white/60 hover:text-white transition-all text-[10px] font-black" title="Toggle Direction">LTR</button>
+        <button onclick="toggleAuthTheme()" class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/10 border border-white/15 text-white/60 hover:text-white transition-all" title="Toggle Theme">
+            <i id="auth-theme-icon" class="fas fa-moon text-sm"></i>
+        </button>
+    </div>
+</div>
+
+<main class="flex-grow flex items-center justify-center px-4 py-12">
+    <div class="w-full max-w-2xl mx-auto text-center">
+
+        <!-- Animated 404 -->
+        <div class="relative mb-8 animate-fade-in-up">
+            <!-- Pool waves SVG -->
+            <div class="relative inline-block">
+                <div class="text-[10rem] md:text-[14rem] font-black leading-none" style="font-family:'Poppins',sans-serif;">
+                    <span class="text-white/10 select-none">4</span>
+                    <span class="relative inline-block">
+                        <!-- The 0 as a pool -->
+                        <div class="w-32 h-32 md:w-48 md:h-48 rounded-full border-8 border-white/20 bg-white/5 flex items-center justify-center mx-auto animate-pulse-glow inline-flex align-middle">
+                            <div class="text-center">
+                                <i class="fas fa-person-drowning text-4xl md:text-5xl text-sky-400/60 animate-float"></i>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="text-white/10 select-none">4</span>
+                </div>
+            </div>
+
+            <!-- Water waves decoration -->
+            <div class="flex justify-center gap-2 mt-4">
+                <div class="pool-lane w-16"></div>
+                <div class="pool-lane w-24"></div>
+                <div class="pool-lane w-16"></div>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-700 p-8 sm:p-10 animate-fade-in-up animation-delay-300 relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-[#0077B6]/8 rounded-full blur-xl pointer-events-none"></div>
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 justify-center mb-6 logo-bounce" aria-label="AquaElite Home">
+                <div class="relative w-10 h-10 shrink-0">
+                    <img src="assets/images/logo.png" alt="AquaElite Logo" class="w-10 h-10 rounded-xl object-cover shadow-lg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div style="display:none;" class="w-10 h-10 bg-[#0077B6] rounded-xl items-center justify-center shadow-lg">
+                        <svg width="22" height="22" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 55 Q25 45 35 55 Q45 65 55 55 Q65 45 75 55" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M10 68 Q20 58 30 68 Q40 78 50 68" stroke="white" stroke-width="4.5" fill="none" stroke-linecap="round" opacity="0.6"/></svg>
+                    </div>
+                </div>
+                <div class="flex flex-col leading-none text-left">
+                    <span class="font-black text-slate-900 dark:text-white text-base" style="font-family:'Poppins',sans-serif;">AQUA</span>
+                    <span class="font-bold text-[#0077B6] dark:text-sky-400 text-[10px] tracking-[0.2em] uppercase">Swimming Academy</span>
+                </div>
+            </a>
+
+            <h1 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-3" style="font-family:'Poppins',sans-serif;">
+                Oops! Page Not Found
+            </h1>
+            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 max-w-md mx-auto">
+                Looks like you've gone off the deep end! The page you're looking for has drifted away. Let's get you back to the pool.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="index.html" class="btn-primary px-7 py-3.5 text-sm">
+                    <i class="fas fa-home text-xs"></i> Back to Home
+                </a>
+                <a href="programs.html" class="btn-secondary px-7 py-3.5 text-sm">
+                    <i class="fas fa-swimmer text-xs"></i> View Programs
+                </a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700">
+                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-4">Quick Links</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="about.html" class="text-xs text-slate-500 dark:text-slate-400 hover:text-[#0077B6] dark:hover:text-sky-400 transition-colors">About</a>
+                    <span class="text-slate-200 dark:text-slate-700">·</span>
+                    <a href="coaches.html" class="text-xs text-slate-500 dark:text-slate-400 hover:text-[#0077B6] dark:hover:text-sky-400 transition-colors">Coaches</a>
+                    <span class="text-slate-200 dark:text-slate-700">·</span>
+                    <a href="facilities.html" class="text-xs text-slate-500 dark:text-slate-400 hover:text-[#0077B6] dark:hover:text-sky-400 transition-colors">Facilities</a>
+                    <span class="text-slate-200 dark:text-slate-700">·</span>
+                    <a href="pricing.html" class="text-xs text-slate-500 dark:text-slate-400 hover:text-[#0077B6] dark:hover:text-sky-400 transition-colors">Pricing</a>
+                    <span class="text-slate-200 dark:text-slate-700">·</span>
+                    <a href="contact.html" class="text-xs text-slate-500 dark:text-slate-400 hover:text-[#0077B6] dark:hover:text-sky-400 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-center text-xs text-white/30 mt-6">
+            &copy; 2025 AquaElite Swimming Academy
+        </p>
+    </div>
+</main>
+
+<script src="components.js"></script>
+<script>
+(function() {
+    const html = document.documentElement;
+    if (localStorage.getItem('aqua_theme') === 'dark' || (!localStorage.getItem('aqua_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+        const icon = document.getElementById('auth-theme-icon');
+        if (icon) icon.className = 'fas fa-sun text-sm text-sky-400';
+    }
+    if (localStorage.getItem('aqua_dir') === 'rtl') {
+        html.setAttribute('dir', 'rtl');
+        const btn = document.getElementById('auth-dir-btn');
+        if (btn) btn.textContent = 'RTL';
+    }
+})();
+</script>
+</body>
+</html>

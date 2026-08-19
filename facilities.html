@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore AquaElite's world-class swimming pool facilities — Olympic pool, kids pool, viewing gallery, locker rooms, training area, and premium amenities.">
+    <title>Our Facilities | AquaElite Swimming Academy</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#0077B6', secondary: '#1B2A4A' } } } }</script>
+</head>
+<body class="bg-white dark:bg-[#0f172a] transition-colors duration-300">
+
+<div id="main-nav"></div>
+
+<!-- Hero -->
+<section class="relative py-24 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="assets/images/facilities-hero.jpg" alt="Pool Facilities" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1B2A4A]/95 via-[#1B2A4A]/80 to-[#0077B6]/50"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up">
+            <i class="fas fa-building text-sky-400"></i> World-Class Facilities
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 animate-fade-in-up animation-delay-200" style="font-family:'Poppins',sans-serif;">
+            Our <span class="gradient-text">Pool Facilities</span>
+        </h1>
+        <p class="text-white/70 text-lg max-w-2xl mx-auto animate-fade-in-up animation-delay-400">International-standard aquatic facilities designed for maximum safety, performance, and comfort.</p>
+    </div>
+</section>
+
+<!-- Facility Stats -->
+<section class="py-12 bg-[#0077B6]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+            <div class="reveal">
+                <div class="text-3xl font-black text-white">6</div>
+                <div class="text-white/70 text-xs font-semibold uppercase tracking-wider mt-1">Pool Areas</div>
+            </div>
+            <div class="reveal animation-delay-200">
+                <div class="text-3xl font-black text-white">50m</div>
+                <div class="text-white/70 text-xs font-semibold uppercase tracking-wider mt-1">Olympic Pool</div>
+            </div>
+            <div class="reveal animation-delay-400">
+                <div class="text-3xl font-black text-white">28–30°C</div>
+                <div class="text-white/70 text-xs font-semibold uppercase tracking-wider mt-1">Water Temperature</div>
+            </div>
+            <div class="reveal animation-delay-600">
+                <div class="text-3xl font-black text-white">24/7</div>
+                <div class="text-white/70 text-xs font-semibold uppercase tracking-wider mt-1">Security & Monitoring</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Grid -->
+<section class="py-20 lg:py-28 bg-white dark:bg-[#0f172a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-images"></i> Gallery</span>
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">
+                Explore Our <span class="text-[#0077B6] dark:text-sky-400">Facilities</span>
+            </h2>
+        </div>
+
+        <!-- Main Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Olympic Pool - Featured -->
+            <div class="lg:col-span-2 facility-card h-72 lg:h-96 reveal">
+                <img src="assets/images/facility-olympic.jpg" alt="50m Olympic Pool" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-sky-300 to-blue-600 dark:from-sky-800 dark:to-blue-900 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-water text-6xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-xl" style="font-family:'Poppins',sans-serif;">50m Olympic Pool</h3>
+                        <p class="text-white/70 text-sm">8 lanes · Competition standard · Electronic timing system</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kids Pool -->
+            <div class="facility-card h-72 lg:h-96 reveal animation-delay-200">
+                <img src="assets/images/facility-kids.jpg" alt="Children's Pool" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-cyan-300 to-teal-400 dark:from-cyan-800 dark:to-teal-900 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-child text-6xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-lg" style="font-family:'Poppins',sans-serif;">Children's Pool</h3>
+                        <p class="text-white/70 text-sm">0.5–1.2m depth · Non-slip tiles · Colorful floats</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training Pool -->
+            <div class="facility-card h-64 reveal">
+                <img src="assets/images/facility-training.jpg" alt="Training Pool" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-blue-300 to-indigo-400 dark:from-blue-800 dark:to-indigo-900 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-dumbbell text-5xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-base" style="font-family:'Poppins',sans-serif;">Training Pool</h3>
+                        <p class="text-white/70 text-xs">25m · Resistance jets · Underwater cameras</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dry Training Area -->
+            <div class="facility-card h-64 reveal animation-delay-200">
+                <img src="assets/images/facility-gym.jpg" alt="Dry Training Area" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-slate-300 to-gray-400 dark:from-slate-700 dark:to-gray-800 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-dumbbell text-5xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-base" style="font-family:'Poppins',sans-serif;">Dry Training Area</h3>
+                        <p class="text-white/70 text-xs">Strength & conditioning · Stretching zone</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Locker Rooms -->
+            <div class="facility-card h-64 reveal animation-delay-400">
+                <img src="assets/images/facility-locker.jpg" alt="Locker Rooms" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-sky-200 to-blue-300 dark:from-sky-800 dark:to-blue-900 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-door-open text-5xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-base" style="font-family:'Poppins',sans-serif;">Premium Locker Rooms</h3>
+                        <p class="text-white/70 text-xs">Hot showers · Separate male/female · Hair dryers</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Viewing Gallery -->
+            <div class="lg:col-span-2 facility-card h-64 reveal">
+                <img src="assets/images/facility-gallery.jpg" alt="Viewing Gallery" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-sky-200 to-slate-300 dark:from-sky-800 dark:to-slate-800 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-binoculars text-6xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-xl" style="font-family:'Poppins',sans-serif;">Parent Viewing Gallery</h3>
+                        <p class="text-white/70 text-sm">Glass-enclosed · Comfortable seating · Pool-level view · AC</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canteen -->
+            <div class="facility-card h-64 reveal animation-delay-200">
+                <img src="assets/images/facility-canteen.jpg" alt="Refreshment Area" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-amber-200 to-orange-300 dark:from-amber-800 dark:to-orange-900 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-mug-hot text-5xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-base" style="font-family:'Poppins',sans-serif;">Refreshment Area</h3>
+                        <p class="text-white/70 text-xs">Healthy snacks · Energy drinks · Seating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Amenities List -->
+<section class="py-20 lg:py-24 bg-slate-50 dark:bg-[#0f172a]/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-list-check"></i> Amenities</span>
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">
+                Everything You <span class="text-[#0077B6] dark:text-sky-400">Need</span>
+            </h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            <div class="reveal flex items-center gap-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-4">
+                <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-temperature-low text-[#0077B6] dark:text-sky-400"></i></div>
+                <div><div class="font-semibold text-sm text-slate-900 dark:text-white">Temperature Controlled</div><div class="text-xs text-slate-400">28–30°C year-round</div></div>
+            </div>
+            <div class="reveal animation-delay-100 flex items-center gap-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-4">
+                <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-filter text-[#0077B6] dark:text-sky-400"></i></div>
+                <div><div class="font-semibold text-sm text-slate-900 dark:text-white">Advanced Filtration</div><div class="text-xs text-slate-400">UV + Ozone treated water</div></div>
+            </div>
+            <div class="reveal animation-delay-200 flex items-center gap-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-4">
+                <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-camera text-[#0077B6] dark:text-sky-400"></i></div>
+                <div><div class="font-semibold text-sm text-slate-900 dark:text-white">Video Analysis</div><div class="text-xs text-slate-400">Underwater cameras for stroke review</div></div>
+            </div>
+            <div class="reveal flex items-center gap-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-4">
+                <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-parking text-[#0077B6] dark:text-sky-400"></i></div>
+                <div><div class="font-semibold text-sm text-slate-900 dark:text-white">Free Parking</div><div class="text-xs text-slate-400">100+ vehicle capacity</div></div>
+            </div>
+            <div class="reveal animation-delay-100 flex items-center gap-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-4">
+                <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-wifi text-[#0077B6] dark:text-sky-400"></i></div>
+                <div><div class="font-semibold text-sm text-slate-900 dark:text-white">Free WiFi</div><div class="text-xs text-slate-400">High-speed throughout facility</div></div>
+            </div>
+            <div class="reveal animation-delay-200 flex items-center gap-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-4">
+                <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-heart-pulse text-[#0077B6] dark:text-sky-400"></i></div>
+                <div><div class="font-semibold text-sm text-slate-900 dark:text-white">First Aid Station</div><div class="text-xs text-slate-400">On-site medical support</div></div>
+            </div>
+            <div class="reveal flex items-center gap-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-4">
+                <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-wind text-[#0077B6] dark:text-sky-400"></i></div>
+                <div><div class="font-semibold text-sm text-slate-900 dark:text-white">Climate Controlled</div><div class="text-xs text-slate-400">AC throughout facility</div></div>
+            </div>
+            <div class="reveal animation-delay-100 flex items-center gap-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-4">
+                <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-lock text-[#0077B6] dark:text-sky-400"></i></div>
+                <div><div class="font-semibold text-sm text-slate-900 dark:text-white">Secure Lockers</div><div class="text-xs text-slate-400">Digital lock storage rooms</div></div>
+            </div>
+            <div class="reveal animation-delay-200 flex items-center gap-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-4">
+                <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-wheelchair text-[#0077B6] dark:text-sky-400"></i></div>
+                <div><div class="font-semibold text-sm text-slate-900 dark:text-white">Accessible Design</div><div class="text-xs text-slate-400">Ramps & pool lift available</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 bg-[#0077B6]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+        <h2 class="text-2xl md:text-3xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">See It For Yourself</h2>
+        <p class="text-white/70 text-sm mb-8">Book a facility tour or a free trial session and experience our world-class aquatic centre firsthand.</p>
+        <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <a href="contact.html" class="btn-secondary btn-secondary-white px-8 py-3.5 text-sm">Book a Tour</a>
+            <a href="programs.html" class="btn-secondary btn-secondary-white px-8 py-3.5 text-sm">View Programs</a>
+        </div>
+    </div>
+</section>
+
+<div id="main-footer"></div>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="components.js"></script>
+</body>
+</html>

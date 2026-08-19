@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AquaElite Swimming Academy Premium — Discover our world-class aquatic facilities, elite coaching programs, and premium membership plans.">
+    <title>Premium Experience | AquaElite Swimming Academy</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#0077B6', secondary: '#1B2A4A' } } } }</script>
+</head>
+<body class="bg-white dark:bg-[#0f172a] transition-colors duration-300">
+
+<div id="main-nav"></div>
+
+<!-- Hero — Split Layout -->
+<section class="hero-lock relative min-h-[92vh] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[92vh] py-20">
+            <!-- Left Content -->
+            <div class="relative z-10 text-center lg:text-left order-2 lg:order-1">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0077B6]/10 dark:bg-sky-400/10 border border-[#0077B6]/20 dark:border-sky-400/20 text-[#0077B6] dark:text-sky-400 text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up">
+                    <i class="fas fa-gem"></i> Premium Experience
+                </span>
+                <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-[1.05] mb-6 animate-fade-in-up animation-delay-200" style="font-family:'Poppins',sans-serif;">
+                    Where Champions <br><span class="gradient-text">Learn to Swim</span>
+                </h1>
+                <p class="text-slate-500 dark:text-slate-400 text-lg mb-10 animate-fade-in-up animation-delay-400 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                    Elite coaching, pristine facilities, and a curriculum designed to transform beginners into confident swimmers and athletes.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-in-up animation-delay-600">
+                    <a href="contact.html" class="btn-primary px-8 py-4 text-sm">
+                        Book Free Trial <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="facilities.html" class="btn-secondary px-8 py-4 text-sm">
+                        Tour Facilities <i class="fas fa-building text-xs"></i>
+                    </a>
+                </div>
+                <!-- Trust Indicators -->
+                <div class="flex items-center justify-center lg:justify-start gap-8 mt-12 animate-fade-in-up animation-delay-800">
+                    <div class="text-center">
+                        <div class="text-2xl font-black text-slate-900 dark:text-white">15+</div>
+                        <div class="text-xs text-slate-400 font-semibold">Years</div>
+                    </div>
+                    <div class="w-px h-10 bg-slate-200 dark:bg-slate-700"></div>
+                    <div class="text-center">
+                        <div class="text-2xl font-black text-slate-900 dark:text-white">3.5K+</div>
+                        <div class="text-xs text-slate-400 font-semibold">Students</div>
+                    </div>
+                    <div class="w-px h-10 bg-slate-200 dark:bg-slate-700"></div>
+                    <div class="text-center">
+                        <div class="text-2xl font-black text-slate-900 dark:text-white">98%</div>
+                        <div class="text-xs text-slate-400 font-semibold">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Image -->
+            <div class="relative order-1 lg:order-2 animate-fade-in">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="assets/images/hero-pool2.jpg" alt="Luxury Swimming Pool" class="w-full h-[400px] lg:h-[550px] object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-[400px] lg:h-[550px] bg-gradient-to-br from-sky-200 to-blue-400 dark:from-sky-800 dark:to-blue-900 flex items-center justify-center\'><i class=\'fas fa-water text-6xl text-white/30\'></i></div>'">
+                </div>
+                <!-- Floating Badge -->
+                <div class="absolute -bottom-4 -left-4 lg:-left-8 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 p-4 animate-float hidden sm:block">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-[#0077B6]/10 dark:bg-sky-400/10 flex items-center justify-center">
+                            <i class="fas fa-award text-xl text-[#0077B6] dark:text-sky-400"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-sm text-slate-900 dark:text-white">Certified Center</div>
+                            <div class="text-xs text-slate-400">SFI Accredited</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Decorative elements -->
+                <div class="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-[#0077B6]/10 dark:bg-sky-400/10 animate-float animation-delay-400 hidden lg:block"></div>
+                <div class="absolute top-1/2 -right-6 w-12 h-12 rounded-full bg-sky-200/30 dark:bg-sky-400/10 animate-float animation-delay-800 hidden lg:block"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Background Orbs -->
+    <div class="bg-orb w-96 h-96 bg-[#0077B6] -top-20 -left-20"></div>
+    <div class="bg-orb w-72 h-72 bg-sky-300 bottom-20 right-10 animation-delay-600"></div>
+</section>
+
+<!-- Featured Programs — Horizontal Scrollable -->
+<section class="py-20 lg:py-28 bg-slate-50 dark:bg-[#0f172a]/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-swimmer"></i> Featured Programs</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">
+                Curated <span class="text-[#0077B6] dark:text-sky-400">Training Paths</span>
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 text-lg mt-4 max-w-2xl mx-auto">From first splash to championship podium — find the program that matches your swimming goals.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Program 1 -->
+            <div class="reveal group bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 overflow-hidden card-hover">
+                <div class="relative h-56 overflow-hidden">
+                    <img src="assets/images/prog-competitive.jpg" alt="Competitive Swimming" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-blue-300 to-indigo-400 dark:from-blue-800 dark:to-indigo-900 flex items-center justify-center\'><i class=\'fas fa-trophy text-5xl text-white/30\'></i></div>'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="badge bg-white/20 text-white border-white/30">Elite</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Competitive Training</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Race-ready training with video analysis, time trials, and meet preparation coaching.</p>
+                    <div class="flex items-center justify-center gap-4 text-xs text-slate-400 mb-5">
+                        <span><i class="fas fa-clock mr-1"></i> 90 min</span>
+                        <span><i class="fas fa-users mr-1"></i> Max 8</span>
+                        <span><i class="fas fa-signal mr-1"></i> Advanced</span>
+                    </div>
+                    <a href="programs.html" class="btn-primary w-full py-3 text-xs">Join Program</a>
+                </div>
+            </div>
+
+            <!-- Program 2 -->
+            <div class="reveal animation-delay-200 group bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 overflow-hidden card-hover">
+                <div class="relative h-56 overflow-hidden">
+                    <img src="assets/images/prog-aerobics.jpg" alt="Water Aerobics" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-teal-300 to-cyan-400 dark:from-teal-800 dark:to-cyan-900 flex items-center justify-center\'><i class=\'fas fa-heart-pulse text-5xl text-white/30\'></i></div>'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="badge bg-white/20 text-white border-white/30">Popular</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Water Aerobics</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Low-impact full-body workout combining cardio, strength, and flexibility in water.</p>
+                    <div class="flex items-center justify-center gap-4 text-xs text-slate-400 mb-5">
+                        <span><i class="fas fa-clock mr-1"></i> 60 min</span>
+                        <span><i class="fas fa-users mr-1"></i> Max 15</span>
+                        <span><i class="fas fa-signal mr-1"></i> All Levels</span>
+                    </div>
+                    <a href="programs.html" class="btn-primary w-full py-3 text-xs">Join Program</a>
+                </div>
+            </div>
+
+            <!-- Program 3 -->
+            <div class="reveal animation-delay-400 group bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 overflow-hidden card-hover sm:col-span-2 lg:col-span-1 sm:max-w-md sm:mx-auto lg:max-w-none">
+                <div class="relative h-56 overflow-hidden">
+                    <img src="assets/images/prog-private.jpg" alt="Private Coaching" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-sky-300 to-blue-400 dark:from-sky-800 dark:to-blue-900 flex items-center justify-center\'><i class=\'fas fa-user-check text-5xl text-white/30\'></i></div>'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="badge bg-white/20 text-white border-white/30">Premium</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Private Coaching</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">One-on-one sessions tailored to your specific goals, pace, and skill development needs.</p>
+                    <div class="flex items-center justify-center gap-4 text-xs text-slate-400 mb-5">
+                        <span><i class="fas fa-clock mr-1"></i> 45 min</span>
+                        <span><i class="fas fa-users mr-1"></i> 1-on-1</span>
+                        <span><i class="fas fa-signal mr-1"></i> Custom</span>
+                    </div>
+                    <a href="programs.html" class="btn-primary w-full py-3 text-xs">Join Program</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facility Showcase — Full Width Grid -->
+<section class="py-20 lg:py-28 bg-white dark:bg-[#0f172a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-building"></i> Our Facilities</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">
+                World-Class <span class="text-[#0077B6] dark:text-sky-400">Facilities</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="facility-card h-48 sm:h-64 lg:h-72 lg:row-span-2 lg:h-auto reveal">
+                <img src="assets/images/facility-olympic.jpg" alt="Olympic Pool" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-sky-300 to-blue-500 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-water text-4xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-lg" style="font-family:'Poppins',sans-serif;">Olympic Pool</h3>
+                        <p class="text-white/70 text-xs">50m competition-ready</p>
+                    </div>
+                </div>
+            </div>
+            <div class="facility-card h-48 sm:h-64 reveal animation-delay-200">
+                <img src="assets/images/facility-kids.jpg" alt="Kids Pool" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-cyan-300 to-teal-400 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-child text-4xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-sm" style="font-family:'Poppins',sans-serif;">Kids Pool</h3>
+                        <p class="text-white/70 text-xs">Safe & fun</p>
+                    </div>
+                </div>
+            </div>
+            <div class="facility-card h-48 sm:h-64 reveal animation-delay-400">
+                <img src="assets/images/facility-training.jpg" alt="Training Area" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-blue-300 to-indigo-400 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-dumbbell text-4xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-sm" style="font-family:'Poppins',sans-serif;">Dry Training</h3>
+                        <p class="text-white/70 text-xs">Strength & conditioning</p>
+                    </div>
+                </div>
+            </div>
+            <div class="facility-card h-48 sm:h-64 reveal">
+                <img src="assets/images/facility-locker.jpg" alt="Locker Rooms" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-slate-300 to-gray-400 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-door-open text-4xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-sm" style="font-family:'Poppins',sans-serif;">Locker Rooms</h3>
+                        <p class="text-white/70 text-xs">Modern amenities</p>
+                    </div>
+                </div>
+            </div>
+            <div class="facility-card h-48 sm:h-64 reveal animation-delay-200">
+                <img src="assets/images/facility-gallery.jpg" alt="Viewing Gallery" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-sky-200 to-blue-300 flex items-center justify-center rounded-2xl\'><i class=\'fas fa-binoculars text-4xl text-white/30\'></i></div>'">
+                <div class="facility-card-overlay">
+                    <div class="text-white">
+                        <h3 class="font-bold text-sm" style="font-family:'Poppins',sans-serif;">Viewing Gallery</h3>
+                        <p class="text-white/70 text-xs">Parent seating area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12 reveal">
+            <a href="facilities.html" class="btn-secondary px-8 py-3.5 text-sm">Explore All Facilities <i class="fas fa-arrow-right text-xs"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Swimming Journey Timeline -->
+<section class="py-20 lg:py-28 bg-slate-50 dark:bg-[#0f172a]/80 relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-route"></i> Your Journey</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">
+                The Swimming <span class="text-[#0077B6] dark:text-sky-400">Journey</span>
+            </h2>
+        </div>
+
+        <div class="relative">
+            <!-- Timeline Line -->
+            <div class="hidden md:block timeline-line"></div>
+
+            <!-- Step 1 -->
+            <div class="reveal flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-16">
+                <div class="md:w-1/2 text-center md:text-right order-2 md:order-1">
+                    <span class="badge badge-primary mb-2">Level 1</span>
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mt-2 mb-2" style="font-family:'Poppins',sans-serif;">Water Confidence</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Learn to feel comfortable in water, floating, basic breath control, and pool safety fundamentals.</p>
+                </div>
+                <div class="relative order-1 md:order-2 flex-shrink-0">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="md:w-1/2 order-3 hidden md:block"></div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="reveal flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-16">
+                <div class="md:w-1/2 order-2 md:order-1 hidden md:block"></div>
+                <div class="relative order-1 md:order-2 flex-shrink-0">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="md:w-1/2 text-center md:text-left order-2 md:order-3">
+                    <span class="badge badge-primary mb-2">Level 2</span>
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mt-2 mb-2" style="font-family:'Poppins',sans-serif;">Stroke Development</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Master freestyle, backstroke, breaststroke, and butterfly with proper technique and form.</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="reveal flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-16">
+                <div class="md:w-1/2 text-center md:text-right order-2 md:order-1">
+                    <span class="badge badge-primary mb-2">Level 3</span>
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mt-2 mb-2" style="font-family:'Poppins',sans-serif;">Endurance & Speed</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Build stamina, improve lap times, learn race starts, turns, and advanced breathing patterns.</p>
+                </div>
+                <div class="relative order-1 md:order-2 flex-shrink-0">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="md:w-1/2 order-3 hidden md:block"></div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="reveal flex flex-col md:flex-row items-center gap-6 md:gap-12">
+                <div class="md:w-1/2 order-2 md:order-1 hidden md:block"></div>
+                <div class="relative order-1 md:order-2 flex-shrink-0">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="md:w-1/2 text-center md:text-left order-2 md:order-3">
+                    <span class="badge badge-primary mb-2">Level 4</span>
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mt-2 mb-2" style="font-family:'Poppins',sans-serif;">Competitive Swimming</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Train for competitions, time trials, meet preparation, strategy, and mental conditioning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Membership Teaser -->
+<section class="py-20 lg:py-28 bg-white dark:bg-[#0f172a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-id-card"></i> Memberships</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">
+                Choose Your <span class="text-[#0077B6] dark:text-sky-400">Plan</span>
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 text-lg mt-4 max-w-2xl mx-auto">Flexible membership options to suit your schedule and swimming goals.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="reveal bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 text-center card-hover">
+                <div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center mx-auto mb-5">
+                    <i class="fas fa-water text-xl text-slate-500 dark:text-slate-400"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Basic</h3>
+                <div class="text-3xl font-black text-slate-900 dark:text-white mt-2 mb-1">₹2,999<span class="text-base font-normal text-slate-400">/mo</span></div>
+                <p class="text-slate-400 text-xs mb-6">Perfect for beginners</p>
+                <a href="pricing.html" class="btn-secondary w-full py-3 text-xs">Learn More</a>
+            </div>
+            <div class="reveal animation-delay-200 bg-white dark:bg-slate-800 rounded-3xl pricing-popular p-8 text-center card-hover relative">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span class="bg-[#0077B6] text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">Most Popular</span>
+                </div>
+                <div class="w-14 h-14 rounded-2xl bg-[#0077B6]/10 dark:bg-sky-400/10 flex items-center justify-center mx-auto mb-5">
+                    <i class="fas fa-fire text-xl text-[#0077B6] dark:text-sky-400"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Pro</h3>
+                <div class="text-3xl font-black text-[#0077B6] dark:text-sky-400 mt-2 mb-1">₹5,999<span class="text-base font-normal text-slate-400">/mo</span></div>
+                <p class="text-slate-400 text-xs mb-6">Best value for regulars</p>
+                <a href="pricing.html" class="btn-primary w-full py-3 text-xs">Get Started</a>
+            </div>
+            <div class="reveal animation-delay-400 bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 text-center card-hover">
+                <div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center mx-auto mb-5">
+                    <i class="fas fa-crown text-xl text-slate-500 dark:text-slate-400"></i>
+                </div>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Premium</h3>
+                <div class="text-3xl font-black text-slate-900 dark:text-white mt-2 mb-1">₹9,999<span class="text-base font-normal text-slate-400">/mo</span></div>
+                <p class="text-slate-400 text-xs mb-6">All-access elite training</p>
+                <a href="pricing.html" class="btn-secondary w-full py-3 text-xs">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Bar Marquee -->
+<section class="py-10 bg-slate-50 dark:bg-[#0f172a]/80 border-y border-slate-100 dark:border-slate-800">
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <div class="flex items-center gap-16 px-8">
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-certificate mr-2"></i> SFI Certified</span>
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-shield-halved mr-2"></i> ISO 9001 Compliant</span>
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-award mr-2"></i> Best Aquatic Center 2024</span>
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-heart mr-2"></i> 3500+ Happy Swimmers</span>
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-star mr-2"></i> 4.9 Google Rating</span>
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-trophy mr-2"></i> 50+ Competition Medals</span>
+            </div>
+            <div class="flex items-center gap-16 px-8">
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-certificate mr-2"></i> SFI Certified</span>
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-shield-halved mr-2"></i> ISO 9001 Compliant</span>
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-award mr-2"></i> Best Aquatic Center 2024</span>
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-heart mr-2"></i> 3500+ Happy Swimmers</span>
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-star mr-2"></i> 4.9 Google Rating</span>
+                <span class="text-slate-400 dark:text-slate-600 font-bold text-sm whitespace-nowrap uppercase tracking-wider"><i class="fas fa-trophy mr-2"></i> 50+ Competition Medals</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="assets/images/cta-banner2.jpg" alt="Pool at Night" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#1B2A4A]/95 to-[#0077B6]/80"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="reveal">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6" style="font-family:'Poppins',sans-serif;">
+                Ready to Make a Splash?
+            </h2>
+            <p class="text-white/70 text-lg mb-10 max-w-2xl mx-auto">Join the AquaElite community today. Your first trial session is free — no strings attached.</p>
+            <a href="contact.html" class="btn-primary px-10 py-4 text-sm">
+                Book Free Trial <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div id="main-footer"></div>
+
+<button id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="components.js"></script>
+</body>
+</html>

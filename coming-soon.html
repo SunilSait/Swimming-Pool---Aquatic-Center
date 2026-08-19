@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Something exciting is coming to AquaElite Swimming Academy. Stay tuned for new programs, features, and more.">
+    <title>Coming Soon | AquaElite Swimming Academy</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#0077B6', secondary: '#1B2A4A' } } } }</script>
+</head>
+<body class="min-h-screen bg-gradient-mesh flex flex-col">
+
+<!-- Top Bar -->
+<div class="flex items-center justify-between p-4 sm:p-6 max-w-7xl mx-auto w-full">
+    <div></div>
+    <div class="flex items-center gap-2">
+        <button id="auth-dir-btn" onclick="toggleAuthDir()" class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/10 border border-white/15 text-white/60 hover:text-white transition-all text-[10px] font-black" title="Toggle Direction">LTR</button>
+        <button onclick="toggleAuthTheme()" class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/10 border border-white/15 text-white/60 hover:text-white transition-all" title="Toggle Theme">
+            <i id="auth-theme-icon" class="fas fa-moon text-sm"></i>
+        </button>
+    </div>
+</div>
+
+<main class="flex-grow flex items-center justify-center px-4 py-12">
+    <div class="w-full max-w-2xl mx-auto text-center">
+
+        <!-- Animated Water Ring -->
+        <div class="relative mb-8 animate-fade-in-up flex justify-center">
+            <div class="relative w-36 h-36">
+                <!-- Outer ring -->
+                <div class="absolute inset-0 rounded-full border-4 border-white/10 animate-ping-slow"></div>
+                <div class="absolute inset-2 rounded-full border-4 border-white/15 animate-ping-slow animation-delay-300"></div>
+                <!-- Core -->
+                <div class="absolute inset-4 rounded-full bg-white/5 border border-white/20 flex items-center justify-center animate-float">
+                    <i class="fas fa-water text-4xl text-sky-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-700 p-8 sm:p-10 animate-fade-in-up animation-delay-300 relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-[#0077B6]/8 rounded-full blur-xl pointer-events-none"></div>
+            <div class="absolute -bottom-10 -left-10 w-20 h-20 bg-sky-300/8 rounded-full blur-xl pointer-events-none"></div>
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 justify-center mb-6 logo-bounce" aria-label="AquaElite Home">
+                <div class="relative w-10 h-10 shrink-0">
+                    <img src="assets/images/logo.png" alt="AquaElite Logo" class="w-10 h-10 rounded-xl object-cover shadow-lg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div style="display:none;" class="w-10 h-10 bg-[#0077B6] rounded-xl items-center justify-center shadow-lg">
+                        <svg width="22" height="22" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 55 Q25 45 35 55 Q45 65 55 55 Q65 45 75 55" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M10 68 Q20 58 30 68 Q40 78 50 68" stroke="white" stroke-width="4.5" fill="none" stroke-linecap="round" opacity="0.6"/></svg>
+                    </div>
+                </div>
+                <div class="flex flex-col leading-none text-left">
+                    <span class="font-black text-slate-900 dark:text-white text-base" style="font-family:'Poppins',sans-serif;">AQUA</span>
+                    <span class="font-bold text-[#0077B6] dark:text-sky-400 text-[10px] tracking-[0.2em] uppercase">Swimming Academy</span>
+                </div>
+            </a>
+
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0077B6]/10 dark:bg-sky-400/10 border border-[#0077B6]/20 dark:border-sky-400/20 text-[#0077B6] dark:text-sky-400 text-[10px] font-bold tracking-widest uppercase mb-5">
+                <i class="fas fa-wrench"></i> Under Construction
+            </span>
+
+            <h1 class="text-2xl md:text-4xl font-black text-slate-900 dark:text-white mb-3" style="font-family:'Poppins',sans-serif;">
+                Something Big Is <span class="text-[#0077B6] dark:text-sky-400">Coming</span>
+            </h1>
+            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 max-w-md mx-auto">
+                We're preparing something amazing — new programs, upgraded facilities, and exclusive content. Be the first to know when we launch!
+            </p>
+
+            <!-- Countdown Timer -->
+            <div class="grid grid-cols-4 gap-3 mb-8 max-w-xs mx-auto" id="countdown-container">
+                <div class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-3 text-center border border-slate-100 dark:border-slate-700">
+                    <div class="text-2xl font-black text-[#0077B6] dark:text-sky-400" id="cd-days">00</div>
+                    <div class="text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">Days</div>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-3 text-center border border-slate-100 dark:border-slate-700">
+                    <div class="text-2xl font-black text-[#0077B6] dark:text-sky-400" id="cd-hours">00</div>
+                    <div class="text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">Hrs</div>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-3 text-center border border-slate-100 dark:border-slate-700">
+                    <div class="text-2xl font-black text-[#0077B6] dark:text-sky-400" id="cd-mins">00</div>
+                    <div class="text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">Mins</div>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-3 text-center border border-slate-100 dark:border-slate-700">
+                    <div class="text-2xl font-black text-[#0077B6] dark:text-sky-400" id="cd-secs">00</div>
+                    <div class="text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">Secs</div>
+                </div>
+            </div>
+
+            <!-- Notify Form -->
+            <div class="max-w-sm mx-auto mb-6">
+                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-3">Get Notified at Launch</p>
+                <form onsubmit="submitNotify(event)" class="flex gap-2">
+                    <input type="email" id="notify-email" placeholder="Enter your email" class="form-input flex-1 text-sm py-3" required>
+                    <button type="submit" class="btn-primary px-5 py-3 text-xs flex-shrink-0 whitespace-nowrap">Notify Me</button>
+                </form>
+                <p id="notify-success" class="hidden text-[#0077B6] dark:text-sky-400 text-xs mt-2 font-semibold"><i class="fas fa-check mr-1"></i>You're on the list! We'll reach out soon.</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+                <a href="index.html" class="btn-primary px-7 py-3.5 text-sm">
+                    <i class="fas fa-home text-xs"></i> Go to Home
+                </a>
+                <a href="contact.html" class="btn-secondary px-7 py-3.5 text-sm">
+                    <i class="fas fa-envelope text-xs"></i> Contact Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Social Row -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+            <a href="#" class="w-9 h-9 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/15 transition-all" aria-label="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+            <a href="#" class="w-9 h-9 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/15 transition-all" aria-label="Instagram"><i class="fab fa-instagram text-sm"></i></a>
+            <a href="#" class="w-9 h-9 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/15 transition-all" aria-label="YouTube"><i class="fab fa-youtube text-sm"></i></a>
+            <a href="#" class="w-9 h-9 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/15 transition-all" aria-label="WhatsApp"><i class="fab fa-whatsapp text-sm"></i></a>
+        </div>
+
+        <p class="text-center text-xs text-white/30 mt-4">
+            &copy; 2025 AquaElite Swimming Academy
+        </p>
+    </div>
+</main>
+
+<script src="components.js"></script>
+<script>
+(function() {
+    const html = document.documentElement;
+    if (localStorage.getItem('aqua_theme') === 'dark' || (!localStorage.getItem('aqua_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+        const icon = document.getElementById('auth-theme-icon');
+        if (icon) icon.className = 'fas fa-sun text-sm text-sky-400';
+    }
+    if (localStorage.getItem('aqua_dir') === 'rtl') {
+        html.setAttribute('dir', 'rtl');
+        const btn = document.getElementById('auth-dir-btn');
+        if (btn) btn.textContent = 'RTL';
+    }
+    // Countdown: target 30 days from now
+    const target = new Date();
+    target.setDate(target.getDate() + 30);
+    function updateCountdown() {
+        const now = new Date();
+        const diff = target - now;
+        if (diff <= 0) return;
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cd-days').textContent = String(d).padStart(2,'0');
+        document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+        document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+        document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+})();
+</script>
+</body>
+</html>

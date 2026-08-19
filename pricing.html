@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AquaElite Swimming Academy membership plans — Basic, Pro, and Premium. Flexible pricing for all swimming programs, coaching, and pool access.">
+    <title>Membership Plans | AquaElite Swimming Academy</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#0077B6', secondary: '#1B2A4A' } } } }</script>
+</head>
+<body class="bg-white dark:bg-[#0f172a] transition-colors duration-300">
+
+<div id="main-nav"></div>
+
+<!-- Hero -->
+<section class="relative py-24 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="assets/images/pricing-hero.jpg" alt="Membership Plans" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1B2A4A]/95 via-[#1B2A4A]/80 to-[#0077B6]/50"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up">
+            <i class="fas fa-tags text-sky-400"></i> Membership Plans
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 animate-fade-in-up animation-delay-200" style="font-family:'Poppins',sans-serif;">
+            Simple, Transparent <span class="gradient-text">Pricing</span>
+        </h1>
+        <p class="text-white/70 text-lg max-w-2xl mx-auto animate-fade-in-up animation-delay-400">No hidden fees. Choose the plan that fits your swimming goals and schedule.</p>
+    </div>
+</section>
+
+<!-- Pricing Cards -->
+<section class="py-20 lg:py-28 bg-white dark:bg-[#0f172a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+            <!-- Basic Plan -->
+            <div class="reveal bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 text-center card-hover flex flex-col">
+                <div class="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-water text-2xl text-slate-500 dark:text-slate-400"></i>
+                </div>
+                <h3 class="font-black text-xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Basic</h3>
+                <p class="text-slate-400 text-sm mb-6">Perfect for beginners</p>
+                <div class="mb-8">
+                    <div class="text-5xl font-black text-slate-900 dark:text-white">₹2,999</div>
+                    <div class="text-slate-400 text-sm mt-1">per month</div>
+                </div>
+                <ul class="space-y-3 mb-8 flex-grow text-left">
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> 3 sessions per week</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> 1 program of your choice</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Group coaching</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Pool access during batch</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Monthly progress report</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-300 dark:text-slate-600"><i class="fas fa-xmark text-slate-300 text-xs flex-shrink-0"></i> Private coaching sessions</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-300 dark:text-slate-600"><i class="fas fa-xmark text-slate-300 text-xs flex-shrink-0"></i> Video stroke analysis</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-300 dark:text-slate-600"><i class="fas fa-xmark text-slate-300 text-xs flex-shrink-0"></i> Competition entry support</li>
+                </ul>
+                <a href="contact.html" class="btn-secondary w-full py-4 text-sm mt-auto">Get Started</a>
+            </div>
+
+            <!-- Pro Plan — Popular -->
+            <div class="reveal animation-delay-200 bg-white dark:bg-slate-800 rounded-3xl pricing-popular p-8 text-center card-hover relative flex flex-col shadow-2xl shadow-[#0077B6]/10">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                    <span class="bg-[#0077B6] text-white text-[10px] font-bold uppercase tracking-widest px-5 py-1.5 rounded-full shadow-lg">⭐ Most Popular</span>
+                </div>
+                <div class="w-16 h-16 rounded-2xl bg-[#0077B6] flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-fire text-2xl text-white"></i>
+                </div>
+                <h3 class="font-black text-xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Pro</h3>
+                <p class="text-slate-400 text-sm mb-6">Best value for regulars</p>
+                <div class="mb-8">
+                    <div class="text-5xl font-black text-[#0077B6] dark:text-sky-400">₹5,999</div>
+                    <div class="text-slate-400 text-sm mt-1">per month</div>
+                </div>
+                <ul class="space-y-3 mb-8 flex-grow text-left">
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> 5 sessions per week</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> 2 programs of your choice</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Group + 2 private sessions/mo</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Unlimited pool access</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Weekly progress report</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Video stroke analysis</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Priority batch booking</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-300 dark:text-slate-600"><i class="fas fa-xmark text-slate-300 text-xs flex-shrink-0"></i> Competition entry support</li>
+                </ul>
+                <a href="contact.html" class="btn-primary w-full py-4 text-sm mt-auto">Get Started</a>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="reveal animation-delay-400 bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 text-center card-hover flex flex-col">
+                <div class="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-crown text-2xl text-slate-500 dark:text-slate-400"></i>
+                </div>
+                <h3 class="font-black text-xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Premium</h3>
+                <p class="text-slate-400 text-sm mb-6">All-access elite training</p>
+                <div class="mb-8">
+                    <div class="text-5xl font-black text-slate-900 dark:text-white">₹9,999</div>
+                    <div class="text-slate-400 text-sm mt-1">per month</div>
+                </div>
+                <ul class="space-y-3 mb-8 flex-grow text-left">
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Unlimited sessions</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> All programs included</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> 8 private sessions/month</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Unlimited pool access</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Daily progress tracking</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Full video analysis suite</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Competition entry support</li>
+                    <li class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#0077B6] dark:text-sky-400 text-xs flex-shrink-0"></i> Nutrition guidance</li>
+                </ul>
+                <a href="contact.html" class="btn-secondary w-full py-4 text-sm mt-auto">Get Started</a>
+            </div>
+        </div>
+
+        <!-- Note -->
+        <p class="text-center text-slate-400 text-xs mt-8 reveal">All plans include locker room access, equipment provision, and free trial session. GST applicable. Annual plans available at 15% discount.</p>
+    </div>
+</section>
+
+<!-- Comparison Table -->
+<section class="py-16 lg:py-20 bg-slate-50 dark:bg-[#0f172a]/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Plan <span class="text-[#0077B6] dark:text-sky-400">Comparison</span></h2>
+        </div>
+        <div class="reveal overflow-x-auto rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
+            <table class="w-full text-sm">
+                <thead>
+                    <tr class="bg-slate-50 dark:bg-slate-800 border-b border-slate-100 dark:border-slate-700">
+                        <th class="text-left px-5 py-4 font-bold text-xs uppercase tracking-wider text-slate-500">Feature</th>
+                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider text-slate-500">Basic</th>
+                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider text-[#0077B6] dark:text-sky-400">Pro ⭐</th>
+                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider text-slate-500">Premium</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-50 dark:divide-slate-700/50">
+                    <tr class="bg-white dark:bg-slate-800">
+                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Sessions per Week</td>
+                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">3</td>
+                        <td class="px-5 py-3.5 text-center text-[#0077B6] dark:text-sky-400 font-bold text-xs">5</td>
+                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">Unlimited</td>
+                    </tr>
+                    <tr class="bg-slate-50/50 dark:bg-slate-800/50">
+                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Private Sessions / Month</td>
+                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">—</td>
+                        <td class="px-5 py-3.5 text-center text-[#0077B6] dark:text-sky-400 font-bold text-xs">2</td>
+                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">8</td>
+                    </tr>
+                    <tr class="bg-white dark:bg-slate-800">
+                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Pool Access</td>
+                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">Batch only</td>
+                        <td class="px-5 py-3.5 text-center text-[#0077B6] dark:text-sky-400 font-bold text-xs">Unlimited</td>
+                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">Unlimited</td>
+                    </tr>
+                    <tr class="bg-slate-50/50 dark:bg-slate-800/50">
+                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Video Stroke Analysis</td>
+                        <td class="px-5 py-3.5 text-center text-slate-300 text-xs"><i class="fas fa-xmark"></i></td>
+                        <td class="px-5 py-3.5 text-center text-[#0077B6] dark:text-sky-400 text-xs"><i class="fas fa-check"></i></td>
+                        <td class="px-5 py-3.5 text-center text-green-500 text-xs"><i class="fas fa-check"></i></td>
+                    </tr>
+                    <tr class="bg-white dark:bg-slate-800">
+                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Competition Support</td>
+                        <td class="px-5 py-3.5 text-center text-slate-300 text-xs"><i class="fas fa-xmark"></i></td>
+                        <td class="px-5 py-3.5 text-center text-slate-300 dark:text-slate-600 text-xs"><i class="fas fa-xmark"></i></td>
+                        <td class="px-5 py-3.5 text-center text-green-500 text-xs"><i class="fas fa-check"></i></td>
+                    </tr>
+                    <tr class="bg-slate-50/50 dark:bg-slate-800/50">
+                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Nutrition Guidance</td>
+                        <td class="px-5 py-3.5 text-center text-slate-300 text-xs"><i class="fas fa-xmark"></i></td>
+                        <td class="px-5 py-3.5 text-center text-slate-300 dark:text-slate-600 text-xs"><i class="fas fa-xmark"></i></td>
+                        <td class="px-5 py-3.5 text-center text-green-500 text-xs"><i class="fas fa-check"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16 lg:py-20 bg-white dark:bg-[#0f172a]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Pricing <span class="text-[#0077B6] dark:text-sky-400">FAQs</span></h2>
+        </div>
+        <div class="space-y-3 reveal">
+            <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl overflow-hidden">
+                <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 text-left">
+                    <span class="font-semibold text-sm text-slate-900 dark:text-white">Can I switch plans mid-month?</span>
+                    <i class="fas fa-chevron-down text-slate-400 acc-icon transition-transform duration-300 text-sm flex-shrink-0"></i>
+                </button>
+                <div class="accordion-content">
+                    <p class="px-6 pb-4 text-slate-500 dark:text-slate-400 text-sm">Yes! You can upgrade your plan at any time. Downgrades take effect from the next billing cycle. Contact our admissions team for hassle-free plan changes.</p>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl overflow-hidden">
+                <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 text-left">
+                    <span class="font-semibold text-sm text-slate-900 dark:text-white">Is there a registration fee?</span>
+                    <i class="fas fa-chevron-down text-slate-400 acc-icon transition-transform duration-300 text-sm flex-shrink-0"></i>
+                </button>
+                <div class="accordion-content">
+                    <p class="px-6 pb-4 text-slate-500 dark:text-slate-400 text-sm">A one-time registration fee of ₹999 applies to all new members. This covers your swimcap, progress booklet, and first-session assessment. GST is applicable.</p>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl overflow-hidden">
+                <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 text-left">
+                    <span class="font-semibold text-sm text-slate-900 dark:text-white">Do you offer sibling or family discounts?</span>
+                    <i class="fas fa-chevron-down text-slate-400 acc-icon transition-transform duration-300 text-sm flex-shrink-0"></i>
+                </button>
+                <div class="accordion-content">
+                    <p class="px-6 pb-4 text-slate-500 dark:text-slate-400 text-sm">Yes! We offer 10% off for the second family member and 15% off for three or more. Please mention this during enrollment to avail the discount.</p>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl overflow-hidden">
+                <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 text-left">
+                    <span class="font-semibold text-sm text-slate-900 dark:text-white">What's the refund policy?</span>
+                    <i class="fas fa-chevron-down text-slate-400 acc-icon transition-transform duration-300 text-sm flex-shrink-0"></i>
+                </button>
+                <div class="accordion-content">
+                    <p class="px-6 pb-4 text-slate-500 dark:text-slate-400 text-sm">Pro-rated refunds are available for medical reasons with documentation. We do not offer refunds for voluntary discontinuation after the first 7 days of a billing cycle.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 bg-[#0077B6]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+        <h2 class="text-2xl md:text-3xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">Still Not Sure? Try Us Free!</h2>
+        <p class="text-white/70 text-sm mb-8">Your first session is completely free — no credit card required. Experience AquaElite before you commit.</p>
+        <a href="contact.html" class="btn-secondary btn-secondary-white px-8 py-3.5 text-sm">Book Free Trial <i class="fas fa-arrow-right text-xs"></i></a>
+    </div>
+</section>
+
+<div id="main-footer"></div>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="components.js"></script>
+</body>
+</html>

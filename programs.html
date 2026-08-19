@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore AquaElite swimming programs by skill level and age group — toddlers, juniors, teens, adults, competitive, and water aerobics with detailed batch timings.">
+    <title>Swimming Programs | AquaElite Academy</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#0077B6', secondary: '#1B2A4A' } } } }</script>
+</head>
+<body class="bg-white dark:bg-[#0f172a] transition-colors duration-300">
+
+<div id="main-nav"></div>
+
+<!-- Hero -->
+<section class="relative py-24 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="assets/images/programs-hero.jpg" alt="Swimming Programs" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1B2A4A]/95 via-[#1B2A4A]/80 to-[#0077B6]/50"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up">
+            <i class="fas fa-swimmer text-sky-400"></i> Our Programs
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 animate-fade-in-up animation-delay-200" style="font-family:'Poppins',sans-serif;">
+            Programs for Every <span class="gradient-text">Swimmer</span>
+        </h1>
+        <p class="text-white/70 text-lg max-w-2xl mx-auto animate-fade-in-up animation-delay-400">Structured, progressive swimming programs by age group and skill level — with flexible batch timings for all schedules.</p>
+    </div>
+</section>
+
+<!-- Filter Tabs -->
+<section class="py-8 bg-white dark:bg-[#0f172a] border-b border-slate-100 dark:border-slate-800 sticky top-16 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap items-center justify-center gap-3">
+            <button onclick="switchProgramTab('tab-all', this)" class="program-tab-btn bg-[#0077B6] text-white shadow-lg" id="tab-btn-all">All Programs</button>
+            <button onclick="switchProgramTab('tab-kids', this)" class="program-tab-btn bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300">Kids (4-12)</button>
+            <button onclick="switchProgramTab('tab-teen', this)" class="program-tab-btn bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300">Teens (13-17)</button>
+            <button onclick="switchProgramTab('tab-adult', this)" class="program-tab-btn bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300">Adults (18+)</button>
+            <button onclick="switchProgramTab('tab-competitive', this)" class="program-tab-btn bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300">Competitive</button>
+        </div>
+    </div>
+</section>
+
+<!-- Programs Content -->
+<section class="py-16 lg:py-24 bg-white dark:bg-[#0f172a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- ALL PROGRAMS TAB -->
+        <div id="tab-all" class="program-tab-content">
+
+            <!-- Kids Programs -->
+            <div class="mb-16">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 dark:bg-sky-400/10 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-child text-[#0077B6] dark:text-sky-400"></i>
+                    </div>
+                    <h2 class="text-2xl font-black text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Kids Programs <span class="text-slate-400 font-normal text-lg">(Ages 4–12)</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Little Splashers -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden card-hover reveal">
+                        <div class="relative h-48 img-zoom">
+                            <img src="assets/images/prog-toddler.jpg" alt="Little Splashers" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-sky-100 to-blue-200 dark:from-sky-900 dark:to-blue-800 flex items-center justify-center\'><i class=\'fas fa-baby text-4xl text-sky-400/50\'></i></div>'">
+                            <div class="absolute top-3 left-3"><span class="badge badge-primary">Ages 4–6</span></div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Little Splashers</h3>
+                            <p class="text-slate-400 text-xs mb-3">Beginner</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 leading-relaxed">Water confidence, floating, bubble blowing, and basic kicks in a fun, safe shallow pool with colorful floats.</p>
+                            <div class="space-y-2 mb-5">
+                                <div class="flex items-center justify-between text-xs">
+                                    <span class="text-slate-400"><i class="fas fa-clock mr-1.5"></i>Batch Timings</span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2.5 text-center">
+                                        <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Morning</div>
+                                        <div class="text-[10px] text-slate-400">7:00 – 8:00 AM</div>
+                                    </div>
+                                    <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2.5 text-center">
+                                        <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Evening</div>
+                                        <div class="text-[10px] text-slate-400">5:30 – 6:30 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-5 text-xs text-slate-500">
+                                <span><i class="fas fa-users mr-1"></i> Max 6 per batch</span>
+                                <span><i class="fas fa-calendar mr-1"></i> Mon/Wed/Fri</span>
+                            </div>
+                            <a href="contact.html" class="btn-primary w-full py-3 text-xs">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Junior Swimmers -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden card-hover reveal animation-delay-200">
+                        <div class="relative h-48 img-zoom">
+                            <img src="assets/images/prog-kids.jpg" alt="Junior Swimmers" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-cyan-100 to-teal-200 dark:from-cyan-900 dark:to-teal-800 flex items-center justify-center\'><i class=\'fas fa-person-swimming text-4xl text-cyan-400/50\'></i></div>'">
+                            <div class="absolute top-3 left-3"><span class="badge badge-primary">Ages 7–10</span></div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Junior Swimmers</h3>
+                            <p class="text-slate-400 text-xs mb-3">Beginner to Intermediate</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 leading-relaxed">Learn all four strokes with proper technique, diving basics, and laps across a 25m pool with progressive drills.</p>
+                            <div class="space-y-2 mb-5">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2.5 text-center">
+                                        <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Morning</div>
+                                        <div class="text-[10px] text-slate-400">6:30 – 7:30 AM</div>
+                                    </div>
+                                    <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2.5 text-center">
+                                        <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Evening</div>
+                                        <div class="text-[10px] text-slate-400">4:30 – 5:30 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-5 text-xs text-slate-500">
+                                <span><i class="fas fa-users mr-1"></i> Max 8 per batch</span>
+                                <span><i class="fas fa-calendar mr-1"></i> Mon–Fri</span>
+                            </div>
+                            <a href="contact.html" class="btn-primary w-full py-3 text-xs">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Pre-Competitive Kids -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden card-hover reveal animation-delay-400">
+                        <div class="relative h-48 img-zoom">
+                            <img src="assets/images/prog-junior.jpg" alt="Pre-Competitive Kids" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-blue-100 to-indigo-200 dark:from-blue-900 dark:to-indigo-800 flex items-center justify-center\'><i class=\'fas fa-stopwatch text-4xl text-blue-400/50\'></i></div>'">
+                            <div class="absolute top-3 left-3"><span class="badge badge-primary">Ages 10–12</span></div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Pre-Competitive</h3>
+                            <p class="text-slate-400 text-xs mb-3">Intermediate</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 leading-relaxed">Speed work, flip turns, relay racing, meet-day preparation, and timed laps with performance tracking.</p>
+                            <div class="space-y-2 mb-5">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2.5 text-center">
+                                        <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Morning</div>
+                                        <div class="text-[10px] text-slate-400">5:30 – 7:00 AM</div>
+                                    </div>
+                                    <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2.5 text-center">
+                                        <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Evening</div>
+                                        <div class="text-[10px] text-slate-400">5:30 – 7:00 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-5 text-xs text-slate-500">
+                                <span><i class="fas fa-users mr-1"></i> Max 10 per batch</span>
+                                <span><i class="fas fa-calendar mr-1"></i> Mon–Sat</span>
+                            </div>
+                            <a href="contact.html" class="btn-primary w-full py-3 text-xs">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teen & Adult Programs -->
+            <div class="mb-16">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 dark:bg-sky-400/10 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-person text-[#0077B6] dark:text-sky-400"></i>
+                    </div>
+                    <h2 class="text-2xl font-black text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Teen & Adult Programs</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Teen Squad -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden card-hover reveal">
+                        <div class="relative h-48 img-zoom">
+                            <img src="assets/images/prog-teen.jpg" alt="Teen Squad" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-indigo-100 to-purple-200 dark:from-indigo-900 dark:to-purple-800 flex items-center justify-center\'><i class=\'fas fa-bolt text-4xl text-indigo-400/50\'></i></div>'">
+                            <div class="absolute top-3 left-3"><span class="badge badge-primary">Ages 13–17</span></div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Teen Squad</h3>
+                            <p class="text-slate-400 text-xs mb-3">Intermediate to Advanced</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 leading-relaxed">Advanced stroke refinement, strength training, race strategy, and club-level meet preparation.</p>
+                            <div class="grid grid-cols-3 gap-2 mb-5">
+                                <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2 text-center">
+                                    <div class="text-[10px] font-bold text-slate-700 dark:text-slate-200">Morning</div>
+                                    <div class="text-[9px] text-slate-400">5:30 AM</div>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2 text-center">
+                                    <div class="text-[10px] font-bold text-slate-700 dark:text-slate-200">Evening</div>
+                                    <div class="text-[9px] text-slate-400">5:00 PM</div>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2 text-center">
+                                    <div class="text-[10px] font-bold text-slate-700 dark:text-slate-200">Weekend</div>
+                                    <div class="text-[9px] text-slate-400">7:00 AM</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-5 text-xs text-slate-500">
+                                <span><i class="fas fa-users mr-1"></i> Max 12/batch</span>
+                                <span><i class="fas fa-calendar mr-1"></i> 6 days/week</span>
+                            </div>
+                            <a href="contact.html" class="btn-primary w-full py-3 text-xs">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Adult Beginners -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden card-hover reveal animation-delay-200">
+                        <div class="relative h-48 img-zoom">
+                            <img src="assets/images/prog-adult.jpg" alt="Adult Beginners" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-slate-100 to-sky-200 dark:from-slate-800 dark:to-sky-900 flex items-center justify-center\'><i class=\'fas fa-person-swimming text-4xl text-slate-400/50\'></i></div>'">
+                            <div class="absolute top-3 left-3"><span class="badge badge-primary">Ages 18+</span></div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Adult Beginners</h3>
+                            <p class="text-slate-400 text-xs mb-3">Beginner</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 leading-relaxed">Learn to swim from scratch in a supportive adult-only environment. Overcome water anxiety and build true confidence.</p>
+                            <div class="grid grid-cols-2 gap-2 mb-5">
+                                <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2.5 text-center">
+                                    <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Morning</div>
+                                    <div class="text-[10px] text-slate-400">6:00 – 7:00 AM</div>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2.5 text-center">
+                                    <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Evening</div>
+                                    <div class="text-[10px] text-slate-400">7:00 – 8:00 PM</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-5 text-xs text-slate-500">
+                                <span><i class="fas fa-users mr-1"></i> Max 8/batch</span>
+                                <span><i class="fas fa-calendar mr-1"></i> Mon/Wed/Fri</span>
+                            </div>
+                            <a href="contact.html" class="btn-primary w-full py-3 text-xs">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Water Aerobics -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden card-hover reveal animation-delay-400">
+                        <div class="relative h-48 img-zoom">
+                            <img src="assets/images/prog-aerobics.jpg" alt="Water Aerobics" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-teal-100 to-cyan-200 dark:from-teal-900 dark:to-cyan-800 flex items-center justify-center\'><i class=\'fas fa-heart-pulse text-4xl text-teal-400/50\'></i></div>'">
+                            <div class="absolute top-3 left-3"><span class="badge badge-primary">All Ages</span></div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Water Aerobics</h3>
+                            <p class="text-slate-400 text-xs mb-3">All Levels</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 leading-relaxed">Low-impact, high-intensity aqua fitness with music. Great for rehabilitation, weight management, and flexibility.</p>
+                            <div class="grid grid-cols-2 gap-2 mb-5">
+                                <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2.5 text-center">
+                                    <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Morning</div>
+                                    <div class="text-[10px] text-slate-400">8:00 – 9:00 AM</div>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-2.5 text-center">
+                                    <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Evening</div>
+                                    <div class="text-[10px] text-slate-400">6:30 – 7:30 PM</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-5 text-xs text-slate-500">
+                                <span><i class="fas fa-users mr-1"></i> Max 15/batch</span>
+                                <span><i class="fas fa-calendar mr-1"></i> Tue/Thu/Sat</span>
+                            </div>
+                            <a href="contact.html" class="btn-primary w-full py-3 text-xs">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitive Programs -->
+            <div>
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 rounded-xl bg-[#0077B6]/10 dark:bg-sky-400/10 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-trophy text-[#0077B6] dark:text-sky-400"></i>
+                    </div>
+                    <h2 class="text-2xl font-black text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Elite & Competitive</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto lg:max-w-none lg:grid-cols-2">
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl border-2 border-[#0077B6] overflow-hidden card-hover reveal lg:col-span-1">
+                        <div class="relative h-48 img-zoom">
+                            <img src="assets/images/prog-competitive.jpg" alt="Elite Competitive" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-[#0077B6] to-[#1B2A4A] flex items-center justify-center\'><i class=\'fas fa-medal text-4xl text-white/30\'></i></div>'">
+                            <div class="absolute top-3 left-3"><span class="bg-[#0077B6] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Elite</span></div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Elite Competitive</h3>
+                            <p class="text-slate-400 text-xs mb-3">Advanced · All Ages</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 leading-relaxed">State and national-level training with video analysis, race simulation, strength & conditioning, and mental coaching.</p>
+                            <div class="grid grid-cols-3 gap-2 mb-5">
+                                <div class="bg-[#0077B6]/5 dark:bg-sky-400/10 rounded-xl p-2 text-center">
+                                    <div class="text-[10px] font-bold text-[#0077B6] dark:text-sky-400">AM</div>
+                                    <div class="text-[9px] text-slate-400">5:00 AM</div>
+                                </div>
+                                <div class="bg-[#0077B6]/5 dark:bg-sky-400/10 rounded-xl p-2 text-center">
+                                    <div class="text-[10px] font-bold text-[#0077B6] dark:text-sky-400">PM</div>
+                                    <div class="text-[9px] text-slate-400">4:00 PM</div>
+                                </div>
+                                <div class="bg-[#0077B6]/5 dark:bg-sky-400/10 rounded-xl p-2 text-center">
+                                    <div class="text-[10px] font-bold text-[#0077B6] dark:text-sky-400">Sat</div>
+                                    <div class="text-[9px] text-slate-400">6:00 AM</div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="btn-primary w-full py-3 text-xs">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden card-hover reveal animation-delay-200 lg:col-span-1">
+                        <div class="relative h-48 img-zoom">
+                            <img src="assets/images/prog-private.jpg" alt="Private Coaching" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-sky-200 to-blue-300 dark:from-sky-800 dark:to-blue-900 flex items-center justify-center\'><i class=\'fas fa-user-check text-4xl text-sky-400/50\'></i></div>'">
+                            <div class="absolute top-3 left-3"><span class="badge badge-primary">1-on-1</span></div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1" style="font-family:'Poppins',sans-serif;">Private Coaching</h3>
+                            <p class="text-slate-400 text-xs mb-3">All Levels · Custom Timing</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 leading-relaxed">Fully customized 1-on-1 sessions. Flexible scheduling, tailored curriculum, and maximum attention for rapid progress.</p>
+                            <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-3 mb-5 text-center">
+                                <div class="text-xs font-bold text-slate-700 dark:text-slate-200">Flexible Scheduling</div>
+                                <div class="text-[10px] text-slate-400 mt-0.5">Book any available slot · 6 AM – 9 PM</div>
+                            </div>
+                            <a href="contact.html" class="btn-secondary w-full py-3 text-xs">Book Session</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KIDS TAB -->
+        <div id="tab-kids" class="program-tab-content hidden">
+            <div class="text-center py-12 text-slate-400">
+                <p class="text-sm">Showing Kids Programs (Ages 4–12)</p>
+                <p class="text-xs mt-1">See All Programs tab for complete listings.</p>
+                <button onclick="switchProgramTab('tab-all', document.getElementById('tab-btn-all'))" class="btn-primary mt-4 px-6 py-3 text-xs">View All Programs</button>
+            </div>
+        </div>
+        <div id="tab-teen" class="program-tab-content hidden">
+            <div class="text-center py-12 text-slate-400">
+                <p class="text-sm">Showing Teen Programs (Ages 13–17)</p>
+                <button onclick="switchProgramTab('tab-all', document.getElementById('tab-btn-all'))" class="btn-primary mt-4 px-6 py-3 text-xs">View All Programs</button>
+            </div>
+        </div>
+        <div id="tab-adult" class="program-tab-content hidden">
+            <div class="text-center py-12 text-slate-400">
+                <p class="text-sm">Showing Adult Programs (Ages 18+)</p>
+                <button onclick="switchProgramTab('tab-all', document.getElementById('tab-btn-all'))" class="btn-primary mt-4 px-6 py-3 text-xs">View All Programs</button>
+            </div>
+        </div>
+        <div id="tab-competitive" class="program-tab-content hidden">
+            <div class="text-center py-12 text-slate-400">
+                <p class="text-sm">Showing Competitive Programs</p>
+                <button onclick="switchProgramTab('tab-all', document.getElementById('tab-btn-all'))" class="btn-primary mt-4 px-6 py-3 text-xs">View All Programs</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Batch Schedule Summary Table -->
+<section class="py-16 lg:py-20 bg-slate-50 dark:bg-[#0f172a]/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-calendar-alt"></i> Schedule</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">Batch Schedule Overview</h2>
+        </div>
+        <div class="reveal overflow-x-auto rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
+            <table class="w-full text-sm">
+                <thead>
+                    <tr class="bg-[#0077B6] text-white">
+                        <th class="text-left px-5 py-4 font-bold text-xs uppercase tracking-wider">Program</th>
+                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider">Age</th>
+                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider">Morning</th>
+                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider">Evening</th>
+                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider">Days</th>
+                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider">Duration</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 dark:divide-slate-700">
+                    <tr class="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                        <td class="px-5 py-4 font-semibold text-slate-800 dark:text-white">Little Splashers</td>
+                        <td class="px-5 py-4 text-center text-slate-500">4–6</td>
+                        <td class="px-5 py-4 text-center text-slate-500">7:00–8:00 AM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">5:30–6:30 PM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">M/W/F</td>
+                        <td class="px-5 py-4 text-center text-slate-500">60 min</td>
+                    </tr>
+                    <tr class="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                        <td class="px-5 py-4 font-semibold text-slate-800 dark:text-white">Junior Swimmers</td>
+                        <td class="px-5 py-4 text-center text-slate-500">7–10</td>
+                        <td class="px-5 py-4 text-center text-slate-500">6:30–7:30 AM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">4:30–5:30 PM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">Mon–Fri</td>
+                        <td class="px-5 py-4 text-center text-slate-500">60 min</td>
+                    </tr>
+                    <tr class="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                        <td class="px-5 py-4 font-semibold text-slate-800 dark:text-white">Pre-Competitive</td>
+                        <td class="px-5 py-4 text-center text-slate-500">10–12</td>
+                        <td class="px-5 py-4 text-center text-slate-500">5:30–7:00 AM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">5:30–7:00 PM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">Mon–Sat</td>
+                        <td class="px-5 py-4 text-center text-slate-500">90 min</td>
+                    </tr>
+                    <tr class="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                        <td class="px-5 py-4 font-semibold text-slate-800 dark:text-white">Teen Squad</td>
+                        <td class="px-5 py-4 text-center text-slate-500">13–17</td>
+                        <td class="px-5 py-4 text-center text-slate-500">5:30–7:00 AM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">5:00–6:30 PM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">Mon–Sat</td>
+                        <td class="px-5 py-4 text-center text-slate-500">90 min</td>
+                    </tr>
+                    <tr class="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                        <td class="px-5 py-4 font-semibold text-slate-800 dark:text-white">Adult Beginners</td>
+                        <td class="px-5 py-4 text-center text-slate-500">18+</td>
+                        <td class="px-5 py-4 text-center text-slate-500">6:00–7:00 AM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">7:00–8:00 PM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">M/W/F</td>
+                        <td class="px-5 py-4 text-center text-slate-500">60 min</td>
+                    </tr>
+                    <tr class="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                        <td class="px-5 py-4 font-semibold text-slate-800 dark:text-white">Water Aerobics</td>
+                        <td class="px-5 py-4 text-center text-slate-500">All</td>
+                        <td class="px-5 py-4 text-center text-slate-500">8:00–9:00 AM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">6:30–7:30 PM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">T/Th/Sat</td>
+                        <td class="px-5 py-4 text-center text-slate-500">60 min</td>
+                    </tr>
+                    <tr class="bg-[#0077B6]/5 dark:bg-sky-400/5 hover:bg-[#0077B6]/10 transition-colors">
+                        <td class="px-5 py-4 font-bold text-[#0077B6] dark:text-sky-400">Elite Competitive</td>
+                        <td class="px-5 py-4 text-center text-slate-500">All</td>
+                        <td class="px-5 py-4 text-center text-slate-500">5:00–7:00 AM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">4:00–6:00 PM</td>
+                        <td class="px-5 py-4 text-center text-slate-500">6 days</td>
+                        <td class="px-5 py-4 text-center text-slate-500">120 min</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Enrollment CTA -->
+<section class="py-16 bg-[#0077B6]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+        <h2 class="text-2xl md:text-3xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">Not Sure Which Program Fits You?</h2>
+        <p class="text-white/70 text-sm mb-8">Book a free assessment session and our coaches will recommend the perfect program.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="contact.html" class="btn-secondary btn-secondary-white px-8 py-3.5 text-sm">Book Free Assessment</a>
+            <a href="pricing.html" class="btn-secondary btn-secondary-white px-8 py-3.5 text-sm">View Pricing</a>
+        </div>
+    </div>
+</section>
+
+<div id="main-footer"></div>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="components.js"></script>
+</body>
+</html>

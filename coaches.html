@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet AquaElite's certified swimming coaches — nationally accredited experts in competitive swimming, kids programs, water aerobics, and fitness training.">
+    <title>Our Coaches | AquaElite Swimming Academy</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#0077B6', secondary: '#1B2A4A' } } } }</script>
+</head>
+<body class="bg-white dark:bg-[#0f172a] transition-colors duration-300">
+
+<div id="main-nav"></div>
+
+<!-- Hero -->
+<section class="relative py-24 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="assets/images/coaches-hero.jpg" alt="Our Coaches" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1B2A4A]/95 via-[#1B2A4A]/80 to-[#0077B6]/50"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up">
+            <i class="fas fa-user-tie text-sky-400"></i> Expert Coaches
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 animate-fade-in-up animation-delay-200" style="font-family:'Poppins',sans-serif;">
+            Meet Our <span class="gradient-text">Champion Coaches</span>
+        </h1>
+        <p class="text-white/70 text-lg max-w-2xl mx-auto animate-fade-in-up animation-delay-400">Nationally certified swimming experts with decades of competitive and coaching experience.</p>
+    </div>
+</section>
+
+<!-- Coaches Grid -->
+<section class="py-20 lg:py-28 bg-white dark:bg-[#0f172a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-people-group"></i> The Team</span>
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">
+                Our Coaching <span class="text-[#0077B6] dark:text-sky-400">Staff</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Coach 1 -->
+            <div class="reveal coach-card rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800">
+                <div class="relative h-72 overflow-hidden">
+                    <img src="assets/images/coach-1.jpg" alt="Rajesh Kumar" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-sky-200 to-blue-400 dark:from-sky-800 dark:to-blue-900 flex items-center justify-center\'><i class=\'fas fa-user text-6xl text-white/30\'></i></div>'">
+                    <div class="coach-overlay"></div>
+                    <div class="absolute bottom-4 left-4 right-4 z-10">
+                        <span class="badge bg-white/20 text-white border-white/30 text-[10px]">Head Coach</span>
+                    </div>
+                </div>
+                <div class="p-5 text-center">
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Rajesh Kumar</h3>
+                    <p class="text-[#0077B6] dark:text-sky-400 text-sm font-semibold mb-3">Competitive & Freestyle</p>
+                    <div class="flex flex-wrap justify-center gap-1.5 mb-3">
+                        <span class="badge badge-primary">SFI Certified</span>
+                        <span class="badge badge-primary">12+ Yrs</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed mb-4">Former national-level swimmer. Specializes in competitive training, race strategy, and stroke optimization for elite swimmers.</p>
+                    <!-- Skills -->
+                    <div class="space-y-2">
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Freestyle</span><span>98%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:98%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Race Strategy</span><span>95%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Strength Training</span><span>88%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coach 2 -->
+            <div class="reveal animation-delay-200 coach-card rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800">
+                <div class="relative h-72 overflow-hidden">
+                    <img src="assets/images/coach-2.jpg" alt="Priya Sharma" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-cyan-200 to-teal-400 dark:from-cyan-800 dark:to-teal-900 flex items-center justify-center\'><i class=\'fas fa-user text-6xl text-white/30\'></i></div>'">
+                    <div class="coach-overlay"></div>
+                    <div class="absolute bottom-4 left-4 right-4 z-10">
+                        <span class="badge bg-white/20 text-white border-white/30 text-[10px]">Senior Coach</span>
+                    </div>
+                </div>
+                <div class="p-5 text-center">
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Priya Sharma</h3>
+                    <p class="text-[#0077B6] dark:text-sky-400 text-sm font-semibold mb-3">Kids & Beginners</p>
+                    <div class="flex flex-wrap justify-center gap-1.5 mb-3">
+                        <span class="badge badge-primary">WSI Certified</span>
+                        <span class="badge badge-primary">8+ Yrs</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed mb-4">Child swimming development specialist with expertise in water confidence, early aquatics, and adaptive instruction for all abilities.</p>
+                    <div class="space-y-2">
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Kids Instruction</span><span>99%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:99%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Backstroke</span><span>92%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Safety Training</span><span>100%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coach 3 -->
+            <div class="reveal animation-delay-400 coach-card rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800">
+                <div class="relative h-72 overflow-hidden">
+                    <img src="assets/images/coach-3.jpg" alt="Arjun Nair" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-blue-200 to-indigo-400 dark:from-blue-800 dark:to-indigo-900 flex items-center justify-center\'><i class=\'fas fa-user text-6xl text-white/30\'></i></div>'">
+                    <div class="coach-overlay"></div>
+                    <div class="absolute bottom-4 left-4 right-4 z-10">
+                        <span class="badge bg-white/20 text-white border-white/30 text-[10px]">Fitness Coach</span>
+                    </div>
+                </div>
+                <div class="p-5 text-center">
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Arjun Nair</h3>
+                    <p class="text-[#0077B6] dark:text-sky-400 text-sm font-semibold mb-3">Water Aerobics & Fitness</p>
+                    <div class="flex flex-wrap justify-center gap-1.5 mb-3">
+                        <span class="badge badge-primary">ACE Certified</span>
+                        <span class="badge badge-primary">10+ Yrs</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed mb-4">Aqua fitness specialist and personal trainer. Designs therapeutic water aerobics programs for rehabilitation and fitness goals.</p>
+                    <div class="space-y-2">
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Water Aerobics</span><span>97%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:97%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Breaststroke</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Rehab Swim</span><span>93%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:93%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coach 4 -->
+            <div class="reveal animation-delay-600 coach-card rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800">
+                <div class="relative h-72 overflow-hidden">
+                    <img src="assets/images/coach-4.jpg" alt="Deepa Menon" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-slate-200 to-sky-400 dark:from-slate-700 dark:to-sky-900 flex items-center justify-center\'><i class=\'fas fa-user text-6xl text-white/30\'></i></div>'">
+                    <div class="coach-overlay"></div>
+                    <div class="absolute bottom-4 left-4 right-4 z-10">
+                        <span class="badge bg-white/20 text-white border-white/30 text-[10px]">Teen Coach</span>
+                    </div>
+                </div>
+                <div class="p-5 text-center">
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Deepa Menon</h3>
+                    <p class="text-[#0077B6] dark:text-sky-400 text-sm font-semibold mb-3">Teen & Butterfly Specialist</p>
+                    <div class="flex flex-wrap justify-center gap-1.5 mb-3">
+                        <span class="badge badge-primary">ASCA Certified</span>
+                        <span class="badge badge-primary">9+ Yrs</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed mb-4">Butterfly stroke and IM specialist. State champion swimmer who now coaches talented teens toward competitive excellence.</p>
+                    <div class="space-y-2">
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Butterfly</span><span>99%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:99%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Individual Medley</span><span>96%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:96%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Teen Coaching</span><span>94%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:94%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coach Credentials -->
+<section class="py-16 lg:py-20 bg-slate-50 dark:bg-[#0f172a]/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Certifications & <span class="text-[#0077B6] dark:text-sky-400">Credentials</span></h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+            <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-5 text-center">
+                <i class="fas fa-certificate text-3xl text-[#0077B6] dark:text-sky-400 mb-3"></i>
+                <div class="font-bold text-sm text-slate-900 dark:text-white">SFI</div>
+                <div class="text-xs text-slate-400">Swimming Federation of India</div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-5 text-center">
+                <i class="fas fa-award text-3xl text-[#0077B6] dark:text-sky-400 mb-3"></i>
+                <div class="font-bold text-sm text-slate-900 dark:text-white">WSI</div>
+                <div class="text-xs text-slate-400">Water Safety Instructor</div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-5 text-center">
+                <i class="fas fa-shield-halved text-3xl text-[#0077B6] dark:text-sky-400 mb-3"></i>
+                <div class="font-bold text-sm text-slate-900 dark:text-white">ACE</div>
+                <div class="text-xs text-slate-400">American Council on Exercise</div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-5 text-center">
+                <i class="fas fa-trophy text-3xl text-[#0077B6] dark:text-sky-400 mb-3"></i>
+                <div class="font-bold text-sm text-slate-900 dark:text-white">ASCA</div>
+                <div class="text-xs text-slate-400">American Swimming Coaches Assoc.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 bg-[#0077B6]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+        <h2 class="text-2xl md:text-3xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">Train With the Best</h2>
+        <p class="text-white/70 text-sm mb-8">Book a session with one of our expert coaches and experience personalized aquatic training.</p>
+        <a href="contact.html" class="btn-secondary btn-secondary-white px-8 py-3.5 text-sm">Book a Session <i class="fas fa-arrow-right text-xs"></i></a>
+    </div>
+</section>
+
+<div id="main-footer"></div>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="components.js"></script>
+</body>
+</html>
