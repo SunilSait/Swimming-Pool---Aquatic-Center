@@ -18,7 +18,7 @@
 <!-- Hero -->
 <section class="relative py-24 lg:py-32 overflow-hidden">
     <div class="absolute inset-0">
-        <img src="assets/images/pricing-hero.jpg" alt="Membership Plans" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        <img src="assets/images/underwater-lanes.png" alt="Membership Plans" class="w-full h-full object-cover" onerror="this.style.display='none'">
         <div class="absolute inset-0 bg-gradient-to-r from-[#1B2A4A]/95 via-[#1B2A4A]/80 to-[#0077B6]/50"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -35,7 +35,7 @@
 <!-- Pricing Cards -->
 <section class="py-20 lg:py-28 bg-white dark:bg-[#0f172a]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
 
             <!-- Basic Plan -->
             <div class="reveal bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 text-center card-hover flex flex-col">
@@ -62,9 +62,9 @@
             </div>
 
             <!-- Pro Plan — Popular -->
-            <div class="reveal animation-delay-200 bg-white dark:bg-slate-800 rounded-3xl pricing-popular p-8 text-center card-hover relative flex flex-col shadow-2xl shadow-[#0077B6]/10">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span class="bg-[#0077B6] text-white text-[10px] font-bold uppercase tracking-widest px-5 py-1.5 rounded-full shadow-lg">⭐ Most Popular</span>
+            <div class="reveal animation-delay-200 bg-white dark:bg-slate-800 rounded-3xl border-2 border-[#0077B6] dark:border-sky-400 p-8 text-center relative flex flex-col shadow-2xl shadow-[#0077B6]/20">
+                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap pointer-events-none">
+                    <span class="bg-[#0077B6] text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg shadow-sky-600/30 whitespace-nowrap inline-flex items-center gap-1.5">⭐ Most Popular</span>
                 </div>
                 <div class="w-16 h-16 rounded-2xl bg-[#0077B6] flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-fire text-2xl text-white"></i>
@@ -89,7 +89,7 @@
             </div>
 
             <!-- Premium Plan -->
-            <div class="reveal animation-delay-400 bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 text-center card-hover flex flex-col">
+            <div class="reveal animation-delay-400 bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 text-center card-hover flex flex-col md:col-span-2 lg:col-span-1 md:max-w-md md:w-full md:mx-auto lg:max-w-none">
                 <div class="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-crown text-2xl text-slate-500 dark:text-slate-400"></i>
                 </div>
@@ -121,55 +121,56 @@
 <!-- Comparison Table -->
 <section class="py-16 lg:py-20 bg-slate-50 dark:bg-[#0f172a]/80">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 reveal">
+        <div class="text-center mb-10 reveal">
             <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Plan <span class="text-[#0077B6] dark:text-sky-400">Comparison</span></h2>
+            <p class="text-slate-400 text-xs sm:text-sm mt-1">Detailed feature breakdown across all membership tiers.</p>
         </div>
-        <div class="reveal overflow-x-auto rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
-            <table class="w-full text-sm">
+        <div class="reveal rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-sm bg-white dark:bg-slate-800">
+            <table class="w-full table-fixed text-[11px] sm:text-xs md:text-sm">
                 <thead>
-                    <tr class="bg-slate-50 dark:bg-slate-800 border-b border-slate-100 dark:border-slate-700">
-                        <th class="text-left px-5 py-4 font-bold text-xs uppercase tracking-wider text-slate-500">Feature</th>
-                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider text-slate-500">Basic</th>
-                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider text-[#0077B6] dark:text-sky-400">Pro ⭐</th>
-                        <th class="text-center px-5 py-4 font-bold text-xs uppercase tracking-wider text-slate-500">Premium</th>
+                    <tr class="bg-slate-100 dark:bg-slate-800/90 border-b border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300">
+                        <th class="w-[34%] text-left px-2.5 sm:px-4 py-3 sm:py-3.5 font-bold uppercase tracking-wider text-[10px] sm:text-xs">Feature</th>
+                        <th class="w-[22%] text-center px-1.5 sm:px-3 py-3 sm:py-3.5 font-bold uppercase tracking-wider text-[10px] sm:text-xs">Basic</th>
+                        <th class="w-[22%] text-center px-1.5 sm:px-3 py-3 sm:py-3.5 font-bold uppercase tracking-wider text-[10px] sm:text-xs text-[#0077B6] dark:text-sky-400 bg-sky-500/10 dark:bg-sky-400/10">Pro ⭐</th>
+                        <th class="w-[22%] text-center px-1.5 sm:px-3 py-3 sm:py-3.5 font-bold uppercase tracking-wider text-[10px] sm:text-xs">Premium</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-50 dark:divide-slate-700/50">
-                    <tr class="bg-white dark:bg-slate-800">
-                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Sessions per Week</td>
-                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">3</td>
-                        <td class="px-5 py-3.5 text-center text-[#0077B6] dark:text-sky-400 font-bold text-xs">5</td>
-                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">Unlimited</td>
+                <tbody class="divide-y divide-slate-100 dark:divide-slate-700/60">
+                    <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-700/30 transition-colors">
+                        <td class="px-2.5 sm:px-4 py-2.5 sm:py-3 font-semibold text-slate-800 dark:text-slate-200">Sessions / Wk</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-500">3</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-[#0077B6] dark:text-sky-400 font-bold bg-sky-500/5 dark:bg-sky-400/5">5</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-600 dark:text-slate-300">Unlimited</td>
                     </tr>
-                    <tr class="bg-slate-50/50 dark:bg-slate-800/50">
-                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Private Sessions / Month</td>
-                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">—</td>
-                        <td class="px-5 py-3.5 text-center text-[#0077B6] dark:text-sky-400 font-bold text-xs">2</td>
-                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">8</td>
+                    <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-700/30 transition-colors">
+                        <td class="px-2.5 sm:px-4 py-2.5 sm:py-3 font-semibold text-slate-800 dark:text-slate-200">Private / Mo</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-400">—</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-[#0077B6] dark:text-sky-400 font-bold bg-sky-500/5 dark:bg-sky-400/5">2</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-600 dark:text-slate-300">8</td>
                     </tr>
-                    <tr class="bg-white dark:bg-slate-800">
-                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Pool Access</td>
-                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">Batch only</td>
-                        <td class="px-5 py-3.5 text-center text-[#0077B6] dark:text-sky-400 font-bold text-xs">Unlimited</td>
-                        <td class="px-5 py-3.5 text-center text-slate-500 text-xs">Unlimited</td>
+                    <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-700/30 transition-colors">
+                        <td class="px-2.5 sm:px-4 py-2.5 sm:py-3 font-semibold text-slate-800 dark:text-slate-200">Pool Access</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-500">Batch</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-[#0077B6] dark:text-sky-400 font-bold bg-sky-500/5 dark:bg-sky-400/5">Unlimited</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-600 dark:text-slate-300">Unlimited</td>
                     </tr>
-                    <tr class="bg-slate-50/50 dark:bg-slate-800/50">
-                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Video Stroke Analysis</td>
-                        <td class="px-5 py-3.5 text-center text-slate-300 text-xs"><i class="fas fa-xmark"></i></td>
-                        <td class="px-5 py-3.5 text-center text-[#0077B6] dark:text-sky-400 text-xs"><i class="fas fa-check"></i></td>
-                        <td class="px-5 py-3.5 text-center text-green-500 text-xs"><i class="fas fa-check"></i></td>
+                    <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-700/30 transition-colors">
+                        <td class="px-2.5 sm:px-4 py-2.5 sm:py-3 font-semibold text-slate-800 dark:text-slate-200">Video Analysis</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-300 dark:text-slate-600"><i class="fas fa-xmark"></i></td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-[#0077B6] dark:text-sky-400 font-bold bg-sky-500/5 dark:bg-sky-400/5"><i class="fas fa-check"></i></td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-emerald-500"><i class="fas fa-check"></i></td>
                     </tr>
-                    <tr class="bg-white dark:bg-slate-800">
-                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Competition Support</td>
-                        <td class="px-5 py-3.5 text-center text-slate-300 text-xs"><i class="fas fa-xmark"></i></td>
-                        <td class="px-5 py-3.5 text-center text-slate-300 dark:text-slate-600 text-xs"><i class="fas fa-xmark"></i></td>
-                        <td class="px-5 py-3.5 text-center text-green-500 text-xs"><i class="fas fa-check"></i></td>
+                    <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-700/30 transition-colors">
+                        <td class="px-2.5 sm:px-4 py-2.5 sm:py-3 font-semibold text-slate-800 dark:text-slate-200">Competition</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-300 dark:text-slate-600"><i class="fas fa-xmark"></i></td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-300 dark:text-slate-600 bg-sky-500/5 dark:bg-sky-400/5"><i class="fas fa-xmark"></i></td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-emerald-500"><i class="fas fa-check"></i></td>
                     </tr>
-                    <tr class="bg-slate-50/50 dark:bg-slate-800/50">
-                        <td class="px-5 py-3.5 font-medium text-slate-700 dark:text-slate-200 text-xs">Nutrition Guidance</td>
-                        <td class="px-5 py-3.5 text-center text-slate-300 text-xs"><i class="fas fa-xmark"></i></td>
-                        <td class="px-5 py-3.5 text-center text-slate-300 dark:text-slate-600 text-xs"><i class="fas fa-xmark"></i></td>
-                        <td class="px-5 py-3.5 text-center text-green-500 text-xs"><i class="fas fa-check"></i></td>
+                    <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-700/30 transition-colors">
+                        <td class="px-2.5 sm:px-4 py-2.5 sm:py-3 font-semibold text-slate-800 dark:text-slate-200">Nutrition Guide</td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-300 dark:text-slate-600"><i class="fas fa-xmark"></i></td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-slate-300 dark:text-slate-600 bg-sky-500/5 dark:bg-sky-400/5"><i class="fas fa-xmark"></i></td>
+                        <td class="px-1.5 sm:px-3 py-2.5 sm:py-3 text-center text-emerald-500"><i class="fas fa-check"></i></td>
                     </tr>
                 </tbody>
             </table>

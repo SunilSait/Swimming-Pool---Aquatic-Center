@@ -58,7 +58,7 @@ function injectNav() {
     }).join('');
 
     el.innerHTML = `
-    <nav class="bg-white/95 dark:bg-[#1B2A4A]/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 sticky top-0 z-50 transition-colors duration-300 relative" id="navbar">
+    <nav class="bg-white/95 dark:bg-[#1B2A4A]/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
@@ -403,6 +403,429 @@ function submitNotify(e) {
     if (input) input.value = '';
 }
 
+/* ─── HOME 2 TESTIMONIALS SLIDER & FILTER CONTROLLER ───────────── */
+function initHome2Testimonials() {
+    const section = document.getElementById('home2-testimonials');
+    if (!section) return;
+
+    const track = document.getElementById('testimonial-track');
+    if (!track) return;
+
+    const filterBtns = section.querySelectorAll('.testimonial-filter-btn');
+    const allSlides = Array.from(track.querySelectorAll('.testimonial-slide-item'));
+    const prevBtn = document.getElementById('testimonial-prev-btn');
+    const nextBtn = document.getElementById('testimonial-next-btn');
+    const dotsContainer = document.getElementById('testimonial-dots');
+
+    let currentCategory = 'all';
+    let visibleSlides = [...allSlides];
+    let currentIndex = 0;
+    let autoPlayTimer = null;
+
+    function renderDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = '';
+        if (visibleSlides.length <= 1) return;
+
+        visibleSlides.forEach((_, idx) => {
+            const dot = document.createElement('button');
+            dot.className = `testimonial-dot ${idx === currentIndex ? 'active' : ''}`;
+            dot.setAttribute('aria-label', `Go to testimonial slide ${idx + 1}`);
+            dot.addEventListener('click', () => goToSlide(idx));
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    function updateTrack() {
+        const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        const offset = currentIndex * 100;
+        track.style.transform = `translateX(${isRTL ? offset : -offset}%)`;
+
+        // Update dots
+        if (dotsContainer) {
+            const dots = dotsContainer.querySelectorAll('.testimonial-dot');
+            dots.forEach((d, idx) => {
+                d.classList.toggle('active', idx === currentIndex);
+            });
+        }
+    }
+
+    function goToSlide(index) {
+        if (visibleSlides.length === 0) return;
+        if (index < 0) {
+            currentIndex = visibleSlides.length - 1;
+        } else if (index >= visibleSlides.length) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+        updateTrack();
+    }
+
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentIndex - 1);
+    }
+
+    function filterCategory(category) {
+        currentCategory = category;
+        currentIndex = 0;
+
+        filterBtns.forEach(btn => {
+            const isMatch = btn.dataset.category === category;
+            btn.classList.toggle('active', isMatch);
+        });
+
+        allSlides.forEach(slide => {
+            const slideCat = slide.dataset.category;
+            const matches = category === 'all' || slideCat === category;
+            slide.style.display = matches ? 'block' : 'none';
+        });
+
+        visibleSlides = allSlides.filter(slide => slide.style.display !== 'none');
+        renderDots();
+        updateTrack();
+    }
+
+    // Filter button clicks
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterCategory(btn.dataset.category || 'all');
+        });
+    });
+
+    // Arrow navigation
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+    // Auto Play
+    function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayTimer = setInterval(nextSlide, 5500);
+    }
+
+    function stopAutoPlay() {
+        if (autoPlayTimer) {
+            clearInterval(autoPlayTimer);
+            autoPlayTimer = null;
+        }
+    }
+
+    section.addEventListener('mouseenter', stopAutoPlay);
+    section.addEventListener('mouseleave', startAutoPlay);
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    track.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+        const threshold = 40;
+        const diff = touchEndX - touchStartX;
+        const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        if (Math.abs(diff) > threshold) {
+            if (diff < 0) {
+                isRTL ? prevSlide() : nextSlide();
+            } else {
+                isRTL ? nextSlide() : prevSlide();
+            }
+        }
+    }
+
+    // Initial setup
+    filterCategory('all');
+    startAutoPlay();
+}
+
+/* ─── HOME 2: BATCH & LANE MATCHER ────────────────────────────── */
+function initBatchMatcher() {
+    const container = document.getElementById('batch-matcher');
+    if (!container) return;
+
+    let selectedLevel = 'adult-beginner';
+    let selectedSlot = 'morning';
+
+    const levelBtns = container.querySelectorAll('[data-matcher-level]');
+    const slotBtns = container.querySelectorAll('[data-matcher-slot]');
+
+    const batchNameEl = document.getElementById('matcher-batch-name');
+    const batchCoachEl = document.getElementById('matcher-batch-coach');
+    const batchLaneEl = document.getElementById('matcher-batch-lane');
+    const batchTimeEl = document.getElementById('matcher-batch-time');
+    const batchRatioEl = document.getElementById('matcher-batch-ratio');
+    const batchCtaEl = document.getElementById('matcher-cta-btn');
+
+    const matcherData = {
+        'adult-beginner': {
+            morning: { name: 'Dawn Hydro-Confidence Squad', coach: 'Coach Rajesh Kumar', lane: 'Lane 1-2 (Shallow Basin)', time: '06:30 AM - 07:30 AM', ratio: '1:4 Max' },
+            afternoon: { name: 'Midday Adult Foundation Batch', coach: 'Coach Priya Sharma', lane: 'Lane 2 (Hydrotherapy Warm Pool)', time: '01:00 PM - 02:00 PM', ratio: '1:4 Max' },
+            evening: { name: 'Executive Sunset Stroke Lab', coach: 'Coach Rajesh Kumar', lane: 'Lane 3 (Olympic Heated)', time: '07:00 PM - 08:00 PM', ratio: '1:5 Max' }
+        },
+        'kids': {
+            morning: { name: 'Weekend Little Splashers Academy', coach: 'Coach Priya Sharma', lane: 'Learner Beach Entry Basin', time: '08:00 AM - 09:00 AM', ratio: '1:3 Max' },
+            afternoon: { name: 'Junior Dolphin Skill Builders', coach: 'Coach Priya Sharma', lane: 'Learner Pool (30°C Warm)', time: '04:00 PM - 05:00 PM', ratio: '1:4 Max' },
+            evening: { name: 'Twilight Young Cadets', coach: 'Coach Priya Sharma', lane: 'Learner Pool (30°C Warm)', time: '05:30 PM - 06:30 PM', ratio: '1:4 Max' }
+        },
+        'competitive': {
+            morning: { name: 'Apex Elite Dawn Sprint Squad', coach: 'Head Coach Rajesh Kumar', lane: 'Lanes 4-6 (Olympic 50M Full Length)', time: '05:30 AM - 07:30 AM', ratio: '1:6 Max' },
+            afternoon: { name: 'High-Performance Video & Stroke Clinic', coach: 'Head Coach Rajesh Kumar', lane: 'Lanes 5-8 (Omega Touchpad Ready)', time: '03:30 PM - 05:30 PM', ratio: '1:6 Max' },
+            evening: { name: 'Championship Endurance & Race Prep', coach: 'Head Coach Rajesh Kumar', lane: 'Lanes 4-7 (Olympic 50M Pace Clock)', time: '06:00 PM - 08:00 PM', ratio: '1:6 Max' }
+        },
+        'fitness': {
+            morning: { name: 'Morning Master Lap Conditioning', coach: 'Coach Arjun Nair', lane: 'Lanes 7-8 (Deep Basin)', time: '07:00 AM - 08:00 AM', ratio: '1:8 Max' },
+            afternoon: { name: 'Hydro-Aerobics & Joint Decompression', coach: 'Coach Arjun Nair', lane: 'Hydrotherapy Therapy Basin', time: '11:30 AM - 12:30 PM', ratio: '1:10 Max' },
+            evening: { name: 'Sunset Cardio Aqua-Burn', coach: 'Coach Arjun Nair', lane: 'Therapy & Multi-Lane Basin', time: '06:30 PM - 07:30 PM', ratio: '1:8 Max' }
+        }
+    };
+
+    function updateMatcherResult() {
+        const data = matcherData[selectedLevel]?.[selectedSlot] || matcherData['adult-beginner']['morning'];
+        if (batchNameEl) batchNameEl.textContent = data.name;
+        if (batchCoachEl) batchCoachEl.textContent = data.coach;
+        if (batchLaneEl) batchLaneEl.textContent = data.lane;
+        if (batchTimeEl) batchTimeEl.textContent = data.time;
+        if (batchRatioEl) batchRatioEl.textContent = data.ratio;
+        if (batchCtaEl) batchCtaEl.href = `contact.html?program=${encodeURIComponent(data.name)}&time=${encodeURIComponent(data.time)}`;
+    }
+
+    levelBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            levelBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedLevel = btn.dataset.matcherLevel;
+            updateMatcherResult();
+        });
+    });
+
+    slotBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            slotBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedSlot = btn.dataset.matcherSlot;
+            updateMatcherResult();
+        });
+    });
+
+    updateMatcherResult();
+}
+
+/* ─── HOME 2: BASIN & FACILITY EXPLORER ───────────────────────── */
+function initBasinExplorer() {
+    const container = document.getElementById('basin-explorer');
+    if (!container) return;
+
+    const tabBtns = container.querySelectorAll('.basin-tab-btn');
+    const basinPanels = container.querySelectorAll('.basin-panel');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.dataset.basinTarget;
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            basinPanels.forEach(panel => {
+                if (panel.id === targetId) {
+                    panel.classList.remove('hidden');
+                    panel.classList.add('animate-fade-in');
+                } else {
+                    panel.classList.add('hidden');
+                    panel.classList.remove('animate-fade-in');
+                }
+            });
+        });
+    });
+}
+
+/* ─── HOME 2: PRICING ANNUAL/MONTHLY SWITCHER ─────────────────── */
+function initPricingToggle() {
+    const track = document.getElementById('pricing-toggle-track');
+    if (!track) return;
+
+    let isAnnual = false;
+    const priceBasic = document.getElementById('price-val-basic');
+    const pricePro = document.getElementById('price-val-pro');
+    const priceElite = document.getElementById('price-val-elite');
+    const labelPeriod = document.querySelectorAll('.price-period-label');
+    const saveBadges = document.querySelectorAll('.annual-save-badge');
+
+    function updatePrices() {
+        if (isAnnual) {
+            track.classList.add('active');
+            if (priceBasic) priceBasic.textContent = '₹2,399';
+            if (pricePro) pricePro.textContent = '₹4,799';
+            if (priceElite) priceElite.textContent = '₹7,999';
+            labelPeriod.forEach(l => l.textContent = '/month (billed yearly)');
+            saveBadges.forEach(b => b.classList.remove('opacity-0'));
+        } else {
+            track.classList.remove('active');
+            if (priceBasic) priceBasic.textContent = '₹2,999';
+            if (pricePro) pricePro.textContent = '₹5,999';
+            if (priceElite) priceElite.textContent = '₹9,999';
+            labelPeriod.forEach(l => l.textContent = '/month');
+            saveBadges.forEach(b => b.classList.add('opacity-0'));
+        }
+    }
+
+    track.addEventListener('click', () => {
+        isAnnual = !isAnnual;
+        updatePrices();
+    });
+}
+
+/* ─── HOME 2: VIRTUAL POOL TOUR MODAL ─────────────────────────── */
+function initVirtualTourModal() {
+    const openBtns = document.querySelectorAll('[data-open-tour-modal]');
+    const modal = document.getElementById('virtual-tour-modal');
+    const closeBtn = document.getElementById('close-tour-modal-btn');
+    if (!modal) return;
+
+    function openModal() {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    openBtns.forEach(btn => btn.addEventListener('click', openModal));
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+}
+
+/* ─── HOME 2: DISCIPLINE TABS ─────────────────────────────────── */
+function initDisciplineTabs() {
+    const tabBtns = document.querySelectorAll('.discipline-pill-btn');
+    const cards = document.querySelectorAll('.discipline-card-item');
+    if (!tabBtns.length) return;
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const target = btn.dataset.discipline;
+
+            cards.forEach(card => {
+                const cardCat = card.dataset.disciplineCat;
+                if (target === 'all' || cardCat === target) {
+                    card.style.display = 'block';
+                    card.classList.add('animate-fade-in');
+                } else {
+                    card.style.display = 'none';
+                    card.classList.remove('animate-fade-in');
+                }
+            });
+        });
+    });
+}
+
+/* ─── HOME 2: AUTOMATIC 3-SLIDE HERO CAROUSEL ────────────────── */
+function initHeroAutoSlider() {
+    const slides = document.querySelectorAll('.hero-slide-item');
+    const dots = document.querySelectorAll('.hero-slider-dot');
+    const prevBtn = document.getElementById('hero-prev-btn');
+    const nextBtn = document.getElementById('hero-next-btn');
+    const heroSection = document.getElementById('home2-hero-section');
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let autoTimer = null;
+    const intervalTime = 5000;
+
+    function showSlide(index) {
+        if (index < 0) {
+            currentIndex = slides.length - 1;
+        } else if (index >= slides.length) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+
+        slides.forEach((slide, idx) => {
+            if (idx === currentIndex) {
+                slide.classList.remove('hidden');
+                slide.classList.add('animate-fade-in');
+            } else {
+                slide.classList.add('hidden');
+                slide.classList.remove('animate-fade-in');
+            }
+        });
+
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentIndex);
+        });
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    function startAutoPlay() {
+        stopAutoPlay();
+        autoTimer = setInterval(nextSlide, intervalTime);
+    }
+
+    function stopAutoPlay() {
+        if (autoTimer) {
+            clearInterval(autoTimer);
+            autoTimer = null;
+        }
+    }
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            showSlide(idx);
+            startAutoPlay();
+        });
+    });
+
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoPlay(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoPlay(); });
+
+    if (heroSection) {
+        heroSection.addEventListener('mouseenter', stopAutoPlay);
+        heroSection.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    showSlide(0);
+    startAutoPlay();
+}
+
+/* ─── HOME 2: QUICK BOOKING CAPSULE ───────────────────────────── */
+function initBookingCapsule() {
+    const form = document.getElementById('hero-booking-capsule-form');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const goal = document.getElementById('capsule-goal')?.value || 'General';
+        const age = document.getElementById('capsule-age')?.value || 'Adult';
+        window.location.href = `contact.html?goal=${encodeURIComponent(goal)}&age=${encodeURIComponent(age)}`;
+    });
+}
+
 /* ─── INIT ────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     injectNav();
@@ -412,4 +835,15 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initCounters();
     initSpotlight();
+    initHome2Testimonials();
+    initBatchMatcher();
+    initBasinExplorer();
+    initPricingToggle();
+    initVirtualTourModal();
+    initDisciplineTabs();
+    initHeroAutoSlider();
+    initBookingCapsule();
 });
+
+
+

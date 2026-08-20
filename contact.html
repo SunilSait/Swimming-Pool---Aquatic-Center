@@ -141,13 +141,19 @@
 
             <!-- Map + Additional Info -->
             <div class="reveal space-y-6">
-                <!-- Map placeholder -->
-                <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700 h-64 lg:h-80 bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-map-location-dot text-4xl text-slate-300 dark:text-slate-600 mb-3 block"></i>
-                        <p class="text-slate-400 text-sm font-medium">12, Aqua Lane, Nungambakkam</p>
-                        <p class="text-slate-400 text-xs">Chennai, Tamil Nadu 600034</p>
-                        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-primary mt-4 px-5 py-2.5 text-xs inline-flex">Open in Maps <i class="fas fa-external-link text-xs"></i></a>
+                <!-- Campus & Facility Map Visual -->
+                <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-100 dark:border-slate-700 h-64 lg:h-80 group">
+                    <img src="assets/images/contact-map.jpg" alt="AquaElite Aquatic Center Location Map" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='assets/images/facility-olympic.jpg'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+                    
+                    <div class="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div class="bg-slate-900/90 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-2.5 text-left text-white shadow-lg">
+                            <p class="text-xs font-bold flex items-center gap-1.5"><i class="fas fa-location-dot text-sky-400"></i> 12, Aqua Lane, Nungambakkam</p>
+                            <p class="text-[11px] text-slate-300">Chennai, Tamil Nadu 600034</p>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-primary px-4 py-2.5 text-xs font-bold shadow-lg whitespace-nowrap inline-flex items-center justify-center gap-1.5 flex-shrink-0">
+                            Directions <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -186,6 +192,134 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- Centered Live Interactive Google Map Section -->
+<section class="py-16 lg:py-20 bg-white dark:bg-[#0f172a] border-t border-slate-100 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 reveal">
+            <span class="section-label mb-3 inline-flex"><i class="fas fa-location-dot"></i> Find Us On Map</span>
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mt-2" style="font-family:'Poppins',sans-serif;">
+                Visit Our <span class="text-[#0077B6] dark:text-sky-400">Olympic Campus</span>
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+                Centrally located at 12, Aqua Lane, Nungambakkam, Chennai with dedicated athlete parking and direct metro connectivity.
+            </p>
+        </div>
+
+        <div class="reveal rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700 relative">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.666952864696!2d80.237617!3d13.056972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52665893e4334b%3A0xb35a0928e08d6d9e!2sNungambakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-[380px] sm:h-[450px] grayscale-[15%] hover:grayscale-0 transition-all duration-500"
+                title="AquaElite Swimming Academy Location Map">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     UNIQUE VIP FAST-TRACK CONCIERGE & DIRECT ACCESS CTA DECK
+     ========================================================================== -->
+<section class="py-20 lg:py-24 bg-slate-50 dark:bg-[#0b1120] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="contact-cta-card p-8 sm:p-12 lg:p-16 text-white reveal">
+            <!-- Ambient Glow Orbs -->
+            <div class="contact-cta-glow w-96 h-96 bg-[#0077B6] -top-20 -left-20"></div>
+            <div class="contact-cta-glow w-96 h-96 bg-sky-400 -bottom-20 -right-20"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
+                
+                <!-- Left: Headline & Key Benefits (7 cols) -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-400 text-xs font-black tracking-widest uppercase">
+                        <i class="fas fa-bolt text-amber-400"></i> Fast-Track Admission Desk
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight" style="font-family:'Poppins',sans-serif;">
+                        Prefer Instant Booking? <br>
+                        <span class="gradient-text">Skip the Queue Today.</span>
+                    </h2>
+
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        Get direct 1-on-1 access to our Senior Admissions Concierge. Book an immediate lane assessment, request custom corporate packages, or receive a 60-second callback.
+                    </p>
+
+                    <!-- Feature Perk Chips -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-2">
+                        <span class="cta-perk-pill"><i class="fas fa-check text-sky-400"></i> 100% Free 45-Min Trial</span>
+                        <span class="cta-perk-pill"><i class="fas fa-check text-sky-400"></i> Sanitized Goggles & Cap Provided</span>
+                        <span class="cta-perk-pill"><i class="fas fa-check text-sky-400"></i> Zero Obligation</span>
+                    </div>
+
+                    <!-- Dual Action Hub -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/919876543210?text=Hi%20AquaElite,%20I'd%20like%20to%20book%20a%20free%20VIP%20trial%20session." target="_blank" rel="noopener" class="btn-primary w-full sm:w-auto px-7 py-4 text-sm font-bold shadow-lg shadow-sky-600/30 flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] border-none text-white">
+                            <i class="fab fa-whatsapp text-lg"></i> Chat on WhatsApp
+                        </a>
+                        <a href="tel:+919876543210" class="btn-secondary btn-secondary-white w-full sm:w-auto px-7 py-4 text-sm font-bold flex items-center justify-center gap-2">
+                            <i class="fas fa-phone-volume text-sky-400"></i> Call Concierge Desk
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive 60-Second Instant Callback Widget (5 cols) -->
+                <div class="lg:col-span-5">
+                    <div class="cta-vip-passport p-6 sm:p-8">
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Admissions Desk Online
+                            </span>
+                            <span class="text-[11px] font-mono text-slate-400 font-bold">AVG RESP: &lt; 2 MINS</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white mb-2" style="font-family:'Poppins',sans-serif;">
+                            Request Instant Callback
+                        </h3>
+                        <p class="text-xs text-slate-300 mb-6">
+                            Enter your phone number and our head coach will call you back immediately to answer any questions.
+                        </p>
+
+                        <form id="cta-callback-form" onsubmit="event.preventDefault(); document.getElementById('cta-callback-success').classList.remove('hidden'); this.classList.add('hidden');" class="space-y-3.5">
+                            <div>
+                                <input type="text" placeholder="Your Name" required class="w-full bg-slate-900/90 text-white placeholder-slate-400 text-xs rounded-xl p-3.5 border border-slate-700 focus:outline-none focus:border-sky-400 font-medium">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Mobile Number (e.g. +91 98765...)" required class="w-full bg-slate-900/90 text-white placeholder-slate-400 text-xs rounded-xl p-3.5 border border-slate-700 focus:outline-none focus:border-sky-400 font-medium">
+                            </div>
+                            <div>
+                                <select class="w-full bg-slate-900/90 text-white text-xs rounded-xl p-3.5 border border-slate-700 focus:outline-none focus:border-sky-400 font-medium">
+                                    <option>Call Me As Soon As Possible</option>
+                                    <option>Call Me This Evening (05:00 - 08:00 PM)</option>
+                                    <option>Call Me Tomorrow Morning</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full btn-primary py-3.5 text-xs font-bold shadow-lg shadow-sky-600/30 flex items-center justify-center gap-2">
+                                <i class="fas fa-headset text-sm"></i> Request Rapid Callback
+                            </button>
+                        </form>
+
+                        <div id="cta-callback-success" class="hidden text-center py-6">
+                            <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-3 text-xl">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <h4 class="text-white font-bold text-base mb-1">Callback Requested!</h4>
+                            <p class="text-xs text-slate-300">Our Admissions Desk is dispatching a team member now.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </section>
 
