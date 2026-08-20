@@ -569,6 +569,18 @@ body {
 [dir="rtl"] .form-input { text-align: right; }
 [dir="rtl"] .fa-arrow-right { transform: scaleX(-1); }
 
+/* RTL Margin Inversions for utility classes */
+[dir="rtl"] .mr-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+[dir="rtl"] .mr-1\.5 { margin-right: 0 !important; margin-left: 0.375rem !important; }
+[dir="rtl"] .mr-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+[dir="rtl"] .mr-3 { margin-right: 0 !important; margin-left: 0.75rem !important; }
+[dir="rtl"] .mr-4 { margin-right: 0 !important; margin-left: 1rem !important; }
+[dir="rtl"] .ml-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+[dir="rtl"] .ml-1\.5 { margin-left: 0 !important; margin-right: 0.375rem !important; }
+[dir="rtl"] .ml-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+[dir="rtl"] .ml-3 { margin-left: 0 !important; margin-right: 0.75rem !important; }
+[dir="rtl"] .ml-4 { margin-left: 0 !important; margin-right: 1rem !important; }
+
 .start-4 { left: 1rem; }
 .end-4 { right: 1rem; }
 [dir="rtl"] .start-4 { right: 1rem; left: auto; }

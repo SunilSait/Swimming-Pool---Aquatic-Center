@@ -94,7 +94,7 @@ function injectNav() {
                     </button>
                     <!-- CTAs -->
                     <a href="login.html" class="hidden xl:inline-flex btn-secondary text-xs px-4 h-9 items-center justify-center">Login</a>
-                    <a href="contact.html" class="hidden xl:inline-flex btn-primary text-xs px-4 h-9 items-center justify-center">Enroll Now</a>
+                    <a href="enroll.html" class="hidden xl:inline-flex btn-primary text-xs px-4 h-9 items-center justify-center ${page === 'enroll.html' ? 'ring-2 ring-sky-400 ring-offset-2 dark:ring-offset-slate-900' : ''}">Enroll Now</a>
                     <!-- Mobile Hamburger -->
                     <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="xl:hidden w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-colors" aria-label="Open menu">
                         <i class="fas fa-bars text-slate-600 dark:text-slate-300"></i>
@@ -114,7 +114,7 @@ function injectNav() {
                     return `<a href="${l.href}" class="block px-4 py-3 rounded-xl text-sm font-semibold ${isActive ? 'bg-[#0077B6] text-white' : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'} transition-colors">${l.label}</a>`;
                 }).join('')}
                 <div class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
-                    <a href="contact.html" class="btn-primary text-xs h-11 flex items-center justify-center text-center w-full">Enroll Now</a>
+                    <a href="enroll.html" class="btn-primary text-xs h-11 flex items-center justify-center text-center w-full">Enroll Now</a>
                     <a href="login.html" class="btn-secondary text-xs h-11 flex items-center justify-center text-center w-full">Login</a>
                 </div>
                 <div class="flex items-center gap-2 mt-3 justify-center">
