@@ -213,7 +213,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 relative z-10 items-stretch">
                 
                 <!-- Main Body (7 cols) -->
-                <div class="lg:col-span-7 p-6 sm:p-10 lg:p-14 space-y-6 flex flex-col justify-between">
+                <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 space-y-5 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex flex-wrap items-center gap-3">
                             <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-400 text-xs font-mono font-bold tracking-widest uppercase">
@@ -262,8 +262,8 @@
                 </div>
 
                 <!-- Ticket Stub (5 cols) -->
-                <div class="lg:col-span-5 ticket-stub-divider bg-slate-950/60 p-6 sm:p-10 lg:p-14 flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
+                <div class="lg:col-span-5 ticket-stub-divider bg-slate-950/60 p-6 sm:p-8 lg:p-10 flex flex-col justify-between space-y-5">
+                    <div class="space-y-3.5">
                         <div class="flex items-center justify-between">
                             <div class="text-xs uppercase tracking-widest font-mono text-slate-400">BOARDING PASS</div>
                             <span class="badge bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-black uppercase">
@@ -275,17 +275,42 @@
                             VIP Walkthrough Pass
                         </h3>
 
-                        <ul class="space-y-2.5 text-xs text-slate-300">
+                        <!-- Ticket Quick Specs -->
+                        <div class="grid grid-cols-2 gap-2 py-2 px-3 rounded-xl bg-white/5 border border-white/10 text-xs font-mono">
+                            <div>
+                                <span class="text-[10px] text-slate-400 block uppercase tracking-wider">Access Tier</span>
+                                <span class="text-sky-300 font-semibold">All-Facility Deck</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-slate-400 block uppercase tracking-wider">Duration</span>
+                                <span class="text-emerald-400 font-semibold">30 Min Guided</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-2 text-xs text-slate-300">
                             <li class="flex items-center gap-2"><i class="fas fa-check text-sky-400"></i> Guided Deck Tour by Lead Coach</li>
                             <li class="flex items-center gap-2"><i class="fas fa-check text-sky-400"></i> Locker & Hydro Basin Access</li>
                             <li class="flex items-center gap-2"><i class="fas fa-check text-sky-400"></i> Free Swimming Cap & Goggles Demo</li>
                             <li class="flex items-center gap-2"><i class="fas fa-check text-sky-400"></i> Valet Parking Validated</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sky-400"></i> 1-on-1 Water Diagnostic Included</li>
                         </ul>
+
+                        <!-- Check-in & Schedule Micro-Badge -->
+                        <div class="p-3 rounded-xl bg-gradient-to-r from-sky-500/10 via-sky-400/5 to-white/5 border border-sky-400/20 space-y-2 text-xs">
+                            <div class="flex items-center justify-between text-[11px]">
+                                <span class="text-slate-300 flex items-center gap-1.5"><i class="fas fa-calendar-check text-sky-400"></i> Visiting Hours</span>
+                                <span class="text-white font-mono font-bold">Mon–Sun • 6 AM–9 PM</span>
+                            </div>
+                            <div class="flex items-center justify-between text-[11px]">
+                                <span class="text-slate-300 flex items-center gap-1.5"><i class="fas fa-map-pin text-sky-400"></i> Check-in Point</span>
+                                <span class="text-sky-300 font-semibold font-mono">South Arena Gate 2</span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Simulated Barcode & Reserve Action -->
-                    <div class="space-y-4 pt-4 border-t border-white/10">
-                        <div class="h-8 flex items-center justify-center gap-1 opacity-40">
+                    <div class="space-y-3 pt-3 border-t border-white/10">
+                        <div class="h-7 flex items-center justify-center gap-1 opacity-40">
                             <div class="w-1 h-full bg-white"></div>
                             <div class="w-2 h-full bg-white"></div>
                             <div class="w-0.5 h-full bg-white"></div>
@@ -300,7 +325,7 @@
                             <div class="w-1.5 h-full bg-white"></div>
                         </div>
 
-                        <a href="contact.html?type=FacilityTour" class="btn-primary w-full py-4 text-xs font-black uppercase tracking-wider text-center shadow-xl shadow-sky-600/30 flex items-center justify-center gap-2">
+                        <a href="contact.html?type=FacilityTour" class="btn-primary w-full py-3.5 text-xs font-black uppercase tracking-wider text-center shadow-xl shadow-sky-600/30 flex items-center justify-center gap-2">
                             <span>Claim Tour Pass</span>
                             <i class="fas fa-arrow-right text-xs"></i>
                         </a>
